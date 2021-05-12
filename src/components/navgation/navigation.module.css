@@ -1,0 +1,34 @@
+.nbar{
+    width: 100%;
+    height: 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid salmon;
+    /* background-color: rgb(12, 11, 11); */
+    background-color: azure;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 100%;
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 3px;
+    color: rgb(224, 46, 30);
+    cursor: pointer;
+}
+
+/* @media (max-width : 660px){
+    .desktop_mode{
+        display: none;
+    }
+} */
+
+

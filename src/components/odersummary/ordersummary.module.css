@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: green;
+    border-bottom: 2px solid salmon ;
+}
+
+.header p{
+    padding-left: 30px;
+}
+
+.header button {
+   height: 22px;
+   margin: 15px 15px 0 0;
+   outline: none;
+   border: none;
+   background: none;
+   font-weight: bold;
+   font-size: large;
+   cursor: pointer;
+}
+
+.header button:hover{
+    background-color: orange;
+}
+
+.items{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.processingbtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.processingbtn p{
+    font-weight: bold;
+    
+}
+
+/* .processingbtn button{
+    background: lightgreen;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+}
+
+.processingbtn button:hover{
+    background: rgb(66, 230, 66);
+} */
+

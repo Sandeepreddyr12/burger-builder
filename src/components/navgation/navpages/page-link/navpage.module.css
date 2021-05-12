@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+
+.navpage{
+    list-style: none;
+    padding-left: 1em;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navpage a{
+    padding: .15em 0.6em;
+   text-decoration: none;
+   color: black;
+   font-size: 0.75rem;
+   font-weight: bold;
+   transition: all 0.2s ease;
+   letter-spacing: .5px;
+   height: 100%;
+   display: block;
+}
+
+.navpage a:hover,
+.navpage a:active,
+.navpage a:focus,
+.navpage a.active{
+    color: rgb(231, 111, 81);
+    text-decoration: underline;
+}      
+
+
