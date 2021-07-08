@@ -1,5 +1,5 @@
 .authContainer{
-    margin : 30px auto;
+    margin : auto;
     width: 350px;
     max-width: 80%;
     text-align: center;
@@ -9,11 +9,65 @@
     box-sizing: border-box;
 }
 
+.authContainer h5{
+    margin: 0;
+    /* color: rgb(34, 243, 156); */
+}
+
 .auth{
     margin: auto;
+    
+}
+
+.Button{
+    background-color: lightskyblue;
+}
+
+.error{
+    /* border: 2px solid rgb(230, 19, 19); */
+    background-color: rgb(233, 198, 194);
+    color: red;
+    font-size: smaller;
+   font-weight: normal;
+}
+
+.success{
+    /* border: 2px solid rgb(5, 170, 5); */
+    color: rgb(214, 28, 28);
+    background-color: rgb(185, 223, 185);
+   
+}
+
+.hide{
+    display: none;
+}
+
+.signinbtn{
+    border-radius: none;
+}
+
+.switchButton{
+    font-size: 0.7rem;
+    font-style: italic;
+    margin: 1rem auto;
+}
+
+.switchButton span{
+    color: rgb(34, 243, 156);
+    font-weight: bold;
+    font-size: 0.85rem;
+    font-style: normal;
+    text-decoration: underline;
 }
 
 
+.validation{
+    margin-top: 1em;
+    color: #ff0039;
+    font-weight: bold;
+    font-size: smaller;
+    text-transform: capitalize;
+}
 
 /* @media (min-width: 660px){
     .formContainer{

@@ -1,7 +1,8 @@
 .button{
-    display: inline-block;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     padding: 0.2em 0.5em; 
-    margin: 0 3rem;
     height: 2em;
     width: auto;
     align-items: center;

@@ -66,10 +66,11 @@ export const orderStart = (orderdata) => {
         }
     }
 
-    export const Ordersfetch = () => {
+    export const Ordersfetch = (userId) => {
         return dispatch =>{
             dispatch(OrdersStart());
-            axiosinstance.get('/orders.json')   
+            const queryParams = '?orderBy="userId"&equalTo="' + userId +'"';
+            axiosinstance.get('/orders.json' + queryParams)   
         .then(res => {
             const fetchedorders = [];
             for(let order in res.data){

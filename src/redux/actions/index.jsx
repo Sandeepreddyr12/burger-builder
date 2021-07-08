@@ -13,5 +13,8 @@ Ordersfetch
 }from './orderNow';
 
 export {
-    authFetch,
+    onAuthfetch,
+    onlogoutFetch,
+    verifyAuth,
+    onAuthPathRedirect
 }from './auth'

@@ -1,33 +1,49 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useEffect} from 'react';
+import { Route, Switch,Redirect} from 'react-router-dom';
+import { useDispatch} from 'react-redux'
+
+// import { auth } from './firebase';
 
 import './App.css';
 import Layout from './components/layout/Layout';
 import Burgerbuilder from './containers/burgerbuilder/Burgerbuilder';
 import Checkout from './containers/Checkout/Checkout';
 import Orders from './containers/Checkout/Orders/Orders';
-import Auth from './containers/Auth/auth'
+import Auth from './containers/Auth/auth';
+import Myprofile from './containers/Auth/Profilecomp/myprofile';
+import Privateroute from './components/Privateroute/Privateroute';
+import * as actions from './redux/actions/index';
+
+
+import Homepage from './containers/Homepage/Homepage';
 
 
 function App() {
+  // const [route,setroute] = useState(null)
 
-  // const [a , seta] = useState(true);
+  // const authenuser = useSelector(state => state.authReducer.isAuthenticated)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     seta(false)
-  //   }, 5000);
-  // }, [])
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(actions.verifyAuth())
+  },[])
+
+
+
 
   return (
     <div className="App">
       <Layout>
         <Switch>
-           
-           <Route path = '/checkout' component = {Checkout} /> 
-           <Route path = '/orders' component = {Orders} />
+           <Route path = '/builder' component = {Burgerbuilder} />
+           <Route path = '/checkout' component = {Checkout} />
+            <Privateroute path = "/Myprofile" component = {Myprofile}/>
+            
+           <Privateroute path = '/orders' component = {Orders} />
            <Route path = '/auth' component = {Auth} />
-           <Route path = '/' exact component = {Burgerbuilder} />
+           <Route path = '/' exact component = {Homepage} />
+           <Redirect to = '/'/>
         </Switch>
       
       {/* {a ?  <Burgerbuilder/> : null} */}

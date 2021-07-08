@@ -85,34 +85,10 @@ class Address extends Component {
     },
     // Loading: false,
     formvalid: false,
+    feedbackMessage : null,
   };
 
-  // formvalidater = (rules, value) => {
-  //     let isValid = false;
-
-  // if(!rules){
-  //   return true
-  // }
-
-  //     if(rules.required){
-  //       isValid = value.trim() !== ''
-  //     }
-  //     if(rules.length){
-  //       isValid = value.length === rules.length;
-  //     }
-
-  //   if (rules.isEmail) {
-  //       const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-  //       isValid = pattern.test(value) && isValid
-  //   }
-
-  //   if (rules.isNumeric) {
-  //       const pattern = /^\d+$/;
-  //       isValid = pattern.test(value) && isValid
-  //   }
-
-  //     return isValid;
-  // }
+ 
 
   orderhandler = (e) => {
     e.preventDefault();
@@ -128,6 +104,7 @@ class Address extends Component {
       Items: this.props.ings,
       Totalprice: this.props.totalprice,
       customer: formdata,
+      userId : this.props.UID
     };
 
     this.props.orderinitiater(order);
@@ -155,10 +132,12 @@ class Address extends Component {
 
     upadatedorderform[inputidentifier] = updatedinputs;
 
-    updatedinputs.valid = formvalidater(
-      updatedinputs.validation,
-      updatedinputs.value
-    );
+    const [inputValid, feedback] = formvalidater(updatedinputs.validation,updatedinputs.value);
+
+    
+    // upadatedorderform.feedbackMessage = feedback;
+
+    updatedinputs.valid = inputValid;
 
     let formValid = true;
     for (let input in upadatedorderform) {
@@ -166,9 +145,11 @@ class Address extends Component {
     }
 
     this.setState({
+      feedbackMessage : feedback,
       orderform: upadatedorderform,
       formvalid: formValid,
     });
+
   };
 
   render() {
@@ -197,7 +178,7 @@ class Address extends Component {
               label={input.id}
             />
           ))}
-
+            
           <Button btntype="success" disabled={!this.state.formvalid}>
             Order-Now
           </Button>
@@ -211,7 +192,8 @@ class Address extends Component {
 
     return (
       <div className={classes.formContainer}>
-        <h4>Add ur address</h4>
+        <h4>Add ur Address</h4>
+        <div className={classes.validation}>{this.state.feedbackMessage}</div>
         {form}
       </div>
     );
@@ -223,6 +205,7 @@ const mapPropsToState = (state) => {
     ings: state.bbreducer.ingredients,
     totalprice: state.bbreducer.totalprice,
     Loading: state.orderNowreducer.Loading,
+    UID : state.authReducer.uid
   };
 };
 

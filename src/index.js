@@ -2,22 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+
+import thunk from 'redux-thunk';
 
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import burgerbuildreducer from './redux/reducers/burgerbuilder';
 import orderNowreducer from './redux/reducers/OrderNow';
-import thunk from 'redux-thunk';
+import authReducer from './redux/reducers/auth';
+
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootreducer = combineReducers({
-bbreducer : burgerbuildreducer,
-orderNowreducer : orderNowreducer
+  bbreducer: burgerbuildreducer,
+  orderNowreducer: orderNowreducer,
+  authReducer: authReducer
 })
 
 const store = createStore(rootreducer, composeEnhancers(applyMiddleware(thunk)));
@@ -25,11 +29,11 @@ const store = createStore(rootreducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   // <React.StrictMode>
-  <Provider store = {store}>
+  <Provider store={store}>
     <BrowserRouter>
-    <App />
+      <App />
     </BrowserRouter>
-    </Provider>,
+  </Provider>,
   // </React.StrictMode>
   document.getElementById('root')
 );

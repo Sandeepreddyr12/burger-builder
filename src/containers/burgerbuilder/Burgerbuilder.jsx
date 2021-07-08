@@ -25,24 +25,20 @@ import * as actions from '../../redux/actions/index';
     componentDidMount(){
 
         this.props.FetchedIngredients();
-        
+        // this.props.onVerify()
 
-    //     console.log(this.props);
-    //     axiosinstance.get('https://react-myburger-3e53f-default-rtdb.firebaseio.com/ingredients.json')
-    //     .then(res => {
-    //         this.setState({ingredients : res.data})
-            
-    //     })
-    //     .catch(error =>{
-    //         this.setState({getError : true})
-            
-    //     })
     }
 
     modalbtn = () => {
-        this.setState({
-            modal_order : true
-        })
+        if(this.props.authenticated){
+            this.setState({
+                modal_order : true
+            })
+        }else{
+            this.props.PathRedirect('/checkout')
+            this.props.history.push('/auth')
+        }
+        
     }
 
     modalremover = () => {
@@ -53,34 +49,6 @@ import * as actions from '../../redux/actions/index';
 
     
     checkouthandler = () => {
-        
-    //     this.setState({ Loading : true });
-
-    //   const order = {
-    //         Items : this.state.ingredients,
-    //         Totalprice : this.state.totalprice,
-    //         customer : {
-    //            name : 'Sandeep Reddy',
-    //            zipcode : '1234568',
-    //            address : 'ndcl',
-    //            country : 'india'
-    //         },
-    //         email : 'sandeep@1234@'
-    //     }
-
-    //    axiosinstance.post('/orders.json', order)
-    //    .then(res =>
-    //    this.setState({ Loading : false, modal_order :false}))
-    //    .catch(error =>  
-    //    this.setState({ Loading : false, modal_order :false}));
-    
-    //     const queryparams = [];
-    //     for(let i in this.state.ingredients){
-    //         queryparams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
-    //     }
-    // queryparams.push('tprice=' + this.props.totalprice);
-
-    //     const queryString = queryparams.join('&');
 
     this.props.PurchaseInit();
 
@@ -144,10 +112,12 @@ import * as actions from '../../redux/actions/index';
 
     // }
 
+    
 
 
     render() {
 
+        console.log(this.props.users)
         const less_disabler = { ...this.props.ings };
          
         for(let key in less_disabler){
@@ -170,6 +140,7 @@ import * as actions from '../../redux/actions/index';
               disabled = {less_disabler}
               orderbutton = {this.orderbtn(this.props.ings)}
               modalbtn = {this.modalbtn}
+              auth = {this.props.authenticated}
               />
               </React.Fragment>
 
@@ -203,7 +174,8 @@ const mapPropsToState = state => {
     return { 
             ings : state.bbreducer.ingredients,
             totalprice : state.bbreducer.totalprice,
-            error : state.bbreducer.error
+            error : state.bbreducer.error,
+            authenticated : state.authReducer.isAuthenticated,
          }
         }
 
@@ -213,6 +185,7 @@ const mapDispatchToProps = (dispatch) => {
         IngredientRemover : (ingname) => dispatch(actions.IngredientRemover(ingname)),
         FetchedIngredients : () => dispatch(actions.Init_Ingredients()),
         PurchaseInit : () => dispatch(actions.Orderinit()),
+        PathRedirect : (path) => dispatch(actions.onAuthPathRedirect(path))
     }
     
 }

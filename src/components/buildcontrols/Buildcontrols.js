@@ -23,7 +23,7 @@ return <div className = {classes.BuildControls}>
         className = {classes.OrderButton}
         disabled = {!props.orderbutton}
         onClick = {props.modalbtn}
-        >ORDER NOW</button>
+        >{props.auth ? "ORDER NOW" : "signup to order"}</button>
         </div>
 }
 

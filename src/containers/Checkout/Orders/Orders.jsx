@@ -20,7 +20,7 @@ class Orders extends Component {
 
     componentDidMount() {
 
-        this.props.Ordersfetch();
+        this.props.Ordersfetch(this.props.uid);
 
 
         // axiosinstance.get('/orders.json')   
@@ -70,13 +70,14 @@ class Orders extends Component {
  const mapPropsToState = state => {
     return { 
             orders : state.orderNowreducer.orderdata,
-            Loading : state.orderNowreducer.Loading
+            Loading : state.orderNowreducer.Loading,
+            uid : state.authReducer.uid
          }
         }
 
 const mapPropsToDispatch = (dispatch) => {
     return{
-        Ordersfetch : () => dispatch(actions.Ordersfetch())
+        Ordersfetch : (userId) => dispatch(actions.Ordersfetch(userId))
     }
     
 }

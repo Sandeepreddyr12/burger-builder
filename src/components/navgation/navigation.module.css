@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid salmon;
+    border-bottom:  2px dotted salmon;
     /* background-color: rgb(12, 11, 11); */
     background-color: azure;
     z-index: 10;
@@ -25,10 +25,23 @@
     cursor: pointer;
 }
 
-/* @media (max-width : 660px){
+.hamburger{
+display: none;
+}
+
+/* .desktop_mode{
+} */
+
+@media (max-width : 605px){
     .desktop_mode{
         display: none;
     }
-} */
+    .hamburger{
+        display: block;
+        font-size: 40px;
+        margin-right: 1em;
+        font-weight: 900;
+    }
+}
 
 
