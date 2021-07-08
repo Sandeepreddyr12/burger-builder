@@ -32,7 +32,6 @@ import Spinner from "../../components/spinners/Spinners"
 //     inputtype: "input",
 //     inputconfig: {
 //       type: "password",
-//       // style : '-webkit-text-security:square',
 //       placeholder: "type ur password",
 //     },
 //     value: "",
@@ -67,7 +66,6 @@ class Auth extends Component {
       inputtype: "input",
       inputconfig: {
         type: "password",
-        // style : '-webkit-text-security:square',
         placeholder: "type ur password",
       },
       value: "",
