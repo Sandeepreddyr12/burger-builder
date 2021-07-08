@@ -1,0 +1,22 @@
+.component{
+    margin : auto;
+    width: 300px;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 2px solid  #eee;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile{
+display: flex;
+justify-content: space-around;
+}
+.circle{
+    width : 70px;
+    margin-left: 0;
+    height : 70px;     
+    border-radius: 50%;
+    background-color: greenyellow;
+}

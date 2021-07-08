@@ -1,0 +1,35 @@
+.container{
+    width: auto;
+    height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 3rem;
+   position: relative;
+}
+
+.box{
+    width: 5rem;
+    height: 1.5rem;
+    border: aqua solid 3px;
+    background-color: rgb(47, 0, 255);
+    position: relative;
+    margin-bottom: .3rem;
+}
+
+.picker{
+    position: absolute;
+    left: 10rem;
+}
+
+.elements{
+    display: flex;
+    align-items: center;
+}
+
+.elements button {
+    align-self: flex-start;
+    margin-left: 1rem;
+    font-size: .8rem;
+    cursor: pointer;
+}

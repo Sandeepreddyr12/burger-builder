@@ -1,0 +1,156 @@
+.sitefooter
+{
+  background-color:#26272b;
+  padding: 2rem 2rem;
+  font-size:1rem;
+  line-height:1.5rem;
+  color:#737373;
+}
+.sitefooter hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+
+.sitefooter h6
+{
+  color:#fff;
+  font-size:1rem;
+  text-transform:uppercase;
+  margin-top: auto;
+  letter-spacing:2px;
+  width: fit-content;
+  border-bottom: #33cc6e 2px solid;
+}
+.sitefooter a
+{
+  color:#33cc6e;
+  text-decoration: none;
+}
+.sitefooter a:hover
+{
+  color:#71e49d;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.footerlinks
+{
+  padding-left:0;
+  list-style:none
+}
+.footerlinks li
+{
+  display:block
+}
+.footerlinks a
+{
+  color:rgb(177, 170, 170);
+  line-height: 30px;
+}
+.footerlinks a:active,.footerlinks a:focus,.footerlinks a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footerlinks.inline li
+{
+  display:inline-block
+}
+.sitefooter .socialicons
+{
+  text-align:center
+}
+.sitefooter .socialicons a
+{
+ 
+ 
+}
+.copyrighttext
+{
+  text-align: center;
+}
+
+.socialicons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.socialicons li
+{
+  display:inline-block;
+}
+
+.socialicons a{
+  width:3rem;
+  height:2.5rem;
+  font-size:2rem;
+  display:inline-block;
+  line-height:2.6rem;
+  text-align:center;
+  /* margin-left:.5rem; */
+  background-color:#33353d;
+  color: white;
+  border-radius:15%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+
+
+.socialicons a:active,.socialicons a:focus,.socialicons a:hover
+{
+  color:#fff;
+  background-color:#29aafe;
+  
+}
+.socialicons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.socialicons a.twitter:hover
+{
+  background-color:#00aced
+}
+.socialicons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.socialicons a.github:hover
+{
+  background-color:#ea4c89
+}
+
+
+.row1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.row1 div{
+  padding: 20px;
+}
+
+.row1 div:nth-child(1){
+  flex: 50%;
+}
+
+.row1 div:nth-child(2){
+  flex: 25%;
+}
+
+.row1 div:nth-child(3){
+  flex: 25%;
+}
+
+
+@media(max-width : 670px){
+  .row1{
+    flex-wrap: wrap;
+  }
+  .row1 div:nth-child(1){
+    flex: 100%;
+  }
+
+}
+

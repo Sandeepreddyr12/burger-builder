@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  min-height: 80rem;
+  position: relative;
+  background: black;
+}
+
+.title{
+  max-width: 70%;
+  color: gold;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: x-large;
+  /* display: block; */
+  margin: auto;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+}
+
+.grid {
+  position: relative;
+  width: 50%;
+  height: 65rem;
+  margin: auto;
+  top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 5fr;
+  justify-content: center;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "image1 text1"
+    "image1 image2"
+    "image3 image2"
+    "image3 image4"
+    "text2 image4"
+    "image5 image5";
+
+}
+
+.grid > div {
+  /* outline: blue 2px solid; */
+}
+
+
+
+.bimg1 {
+  grid-area: image1;
+  background-image: url("/images/gridimages/burgereating.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text1 {
+  grid-area: text1;
+  color: gold;
+  max-width: 80%;
+}
+
+.cimg1 {
+  grid-area: image2;
+  background-image: url("/images/gridimages/coffe img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cimg2 {
+  grid-area: image3;
+  background-image: url("/images/gridimages/coffe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.simg1 {
+  grid-area: image4;
+  background-image: url("/images/gridimages/sanswich.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text2 {
+  grid-area: text2;
+  color: gold;
+  max-width: 80%;
+}
+
+.fimg1 {
+  grid-area: image5;
+  background-image: url("/images/gridimages/Fullsize.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ display: flex;
+}
+
+.fimg1 div{
+  margin: auto;
+  width: 18em;
+  height: 6.5em;
+  background-color: black;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fimg1 div span{
+  color: goldenrod;
+  text-transform: capitalize;
+  font-size: .7rem;
+  margin-bottom: .8rem;
+  letter-spacing: 1px;
+
+}
+
+.fimg1 div button{
+  color: black;
+  border-radius: 0px;
+  padding: 0 1em;
+  transition: all .3s;
+}
+
+.fimg1 div button:hover{
+  background-color: rgb(71, 64, 64);
+  color: white;
+}
+
+.text1 span, .text2 span{
+  font-size: x-small;
+  letter-spacing: 1.2px;
+} 
+
+.text1 h3, .text2 h3{
+  letter-spacing: 2px;
+}
+
+.text1 p, .text2 p{
+  font-size: xx-small;
+  color: antiquewhite;
+  width: 55ch;
+  letter-spacing: .5px;
+}
+
+.endCaption{
+  position: relative;
+  color: gold;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.endCaption p{
+  font-size: 1.5rem;
+  margin-bottom: auto;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+@media (max-width : 675px){
+  .grid{
+    margin: auto;
+    width: 80%;
+    min-height: 85rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2.5fr 1fr 2fr 2.5fr 1fr 4fr;
+    
+    justify-content: center;
+    align-content: center;
+    grid-gap: 0px;
+    grid-row-gap: 1rem;
+    grid-template-areas:
+      "image1"
+      "text1"
+      "image2"
+      "image4"
+      "text2"
+      "image5";
+      /* height:auto; */
+  }  
+
+.grid>img{
+  max-width: 100%;
+  height: auto;
+}
+}
