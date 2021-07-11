@@ -11,12 +11,6 @@ const Myprofile = (props) => {
     // const user = useSelector(state => state.authReducer.user)
     console.log(props.users)
 
-    const Switchbtn = {
-      borderRadius : "0px",
-      width : "94%",
-      boxSizing : "border-box",
-      marginTop : "1rem",
-   };
 
   const historyRepalceHandler = (link) => {
     props.history.replace(link);
@@ -31,16 +25,15 @@ const Myprofile = (props) => {
         <div className = {classes.component}>
            <div className = {classes.profile}>
            <div className = {classes.circle}>
-             hi
+             <img src="/images/profileimg.png" alt="profile" />
            </div>
-            <div> 
-              <span>hello</span>
-              <div><strong>{props.users.name}</strong></div>
-            <div><strong>{props.users.email}</strong></div>
+            <div className = {classes.details}> 
+              <span>hello <span>🙏🏻</span></span>
+              <div style = {{textTransform : "capitalize"}}><strong>📛  {props.users.name}</strong></div>
+            <div><strong>📧  {props.users.email}</strong></div>
             </div>
            </div>
             <Button btntype = "cancel"
-        style = {Switchbtn}
         clicked = {logoutHandler}
         >logout</Button>
         </div>

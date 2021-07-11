@@ -13,6 +13,18 @@
     margin: auto;
 }
 
+.form input::placeholder{
+    color: rgb(129, 123, 123);
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: small;
+    letter-spacing: .5px;
+    transition: color 0.3s ease-in;
+}
+.form input:focus::placeholder{
+    color: transparent;
+}
+
 .validation{
     color: #ff0039;
     font-weight: bold;

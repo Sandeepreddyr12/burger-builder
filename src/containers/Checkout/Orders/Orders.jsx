@@ -6,6 +6,7 @@ import Order from '../../../components/Order/Order';
 import axiosinstance from '../../../axios-orders';
 import errorHandler from '../../../Global-error/Errorhandler';
 import Spinner from '../../../components/spinners/Spinners';
+import Buttons from '../../../components/buttons/Buttons';
 
 import * as actions from '../../../redux/actions/index';
 
@@ -46,21 +47,25 @@ class Orders extends Component {
 
 
     render() {
-       let orderpage =    <Spinner/>
+        console.log(this.props.orders.length == true)
+
+       let orderpage  =  <Spinner/> 
 
         if(!this.props.Loading){
             orderpage = (<div className = {classes.orders}>
-                {this.props.orders.map( order => (
+              {this.props.orders.length ? this.props.orders.map( order => (
                 <Order 
                 key = {order.id}
                 ingredients = {order.Items}
                 price = {order.Totalprice}
                 />)
-                )}
+                ) : <div className = {classes.norders}>No Orders Placed. 
+                <Buttons>Explore here</Buttons>
+                </div> }
             </div>)
         }
         return  (
-            <div>
+            <div className = {classes.container}>
                 {orderpage}
             </div>
         )

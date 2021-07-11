@@ -87,14 +87,14 @@ const onAuthchangeSuccess = () => {
 
 
 
-export const onAuthfetch = (email, password, isSignup, historyReplaceHandler) => async dispatch => {
+export const onAuthfetch = (email, password, isSignup,name, historyReplaceHandler) => async dispatch => {
   if(isSignup){
     dispatch(signUpRequest());
         auth.createUserWithEmailAndPassword(email, password)
         .then(userAuth => {
           console.log(userAuth)
           userAuth.user.updateProfile({
-            displayName: 'sandeep',
+            displayName: name,
           })
         
         .then(() => {

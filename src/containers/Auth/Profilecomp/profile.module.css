@@ -1,22 +1,56 @@
 .component{
+    position: relative;
+    top: 5rem;
     margin : auto;
-    width: 300px;
+    width: 500px;
+    min-height: 15rem;
     max-width: 80%;
     text-align: center;
     box-shadow: 0 2px 3px #ccc;
     border: 2px solid  #eee;
     padding: 20px;
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    background: blanchedalmond;
 }
 
 .profile{
 display: flex;
 justify-content: space-around;
+flex-wrap: wrap;
 }
 .circle{
-    width : 70px;
+    width : 7rem;
     margin-left: 0;
-    height : 70px;     
+    height : 7rem;     
     border-radius: 50%;
-    background-color: greenyellow;
 }
+
+.circle img{
+    max-width: 100%;
+}
+
+.component button{
+    width : 30%;
+    box-sizing : border-box;
+    margin-top : 1rem;
+    /* margin-left: 8%; */
+    align-self: center;
+}
+
+.details span{
+   text-transform: capitalize;
+   font-family: 'Shadows Into Light', cursive;
+   font-weight: bolder;
+   font-size: large;
+   letter-spacing: 1px;
+}
+
+.details div{
+    font-size: 1.3rem;
+    margin: .5rem;
+}
+
