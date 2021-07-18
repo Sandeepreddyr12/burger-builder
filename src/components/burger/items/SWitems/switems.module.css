@@ -1,0 +1,82 @@
+
+
+.buntop, .bunbottom{
+    margin:0 auto;
+    position: relative;
+    background-image:url(/images/sandwiches/bread.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 22%;
+    width: 100%;
+    
+}
+
+.buntop{
+  bottom: -3px;
+  z-index: 1;
+}
+
+
+
+.Meat {
+    width: 80%;
+    height: 8%;
+    background: linear-gradient(#7f3608, #702e05);
+    margin: 2% auto;
+    border-radius: 15px;
+    position: relative;
+}
+
+.Cheese {
+    width: 90%;
+    height: 4.5%;
+    margin: 2% auto;
+    background: linear-gradient(#f4d004, #d6bb22);
+    border-radius: 20px;
+    position: relative;
+}
+
+.Salad {
+    width: 85%;
+    height: 7%;
+    margin: 2% auto;
+    background: linear-gradient(#228c1d, #91ce50);
+    border-radius: 20px;
+    position: relative;
+}
+
+.Bacon {
+    width: 80%;
+    height: 3%;
+    background: linear-gradient(#bf3813, #c45e38);
+    margin: 2% auto;
+    position: relative;
+
+}
+
+.tomato::before,
+.tomato::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background-image: radial-gradient(ellipse at 50%, transparent 50%, #f25d1b 57%), linear-gradient(15deg, transparent 37%, #d42a07 50%, transparent 63%), linear-gradient(-15deg, transparent 37%, #d42a07 50%, transparent 63%), radial-gradient(ellipse at 50%, #ec8c59 50%, #f25d1b 60%),
+  radial-gradient(ellipse at 50%, transparent 46px, #fcf3e0 47px);
+  box-shadow: 0 6px 3px red;
+  
+  width: 200px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.tomato::before {
+  transform: rotate(5deg);
+  bottom: 5px;
+}
+
+.tomato::after {
+  right: 0;
+  left: -55px;
+  bottom: -2px;
+  transform: rotate(-5deg);
+}
+

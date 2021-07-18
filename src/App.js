@@ -6,7 +6,7 @@ import { useDispatch} from 'react-redux'
 
 import './App.css';
 import Layout from './components/layout/Layout';
-import Burgerbuilder from './containers/burgerbuilder/Burgerbuilder';
+import Builder from './containers/builderss/Builders';
 import Checkout from './containers/Checkout/Checkout';
 import Orders from './containers/Checkout/Orders/Orders';
 import Auth from './containers/Auth/auth';
@@ -14,8 +14,8 @@ import Myprofile from './containers/Auth/Profilecomp/myprofile';
 import Privateroute from './components/Privateroute/Privateroute';
 import * as actions from './redux/actions/index';
 
-
 import Homepage from './containers/Homepage/Homepage';
+import SWitems from './components/burger/items/SWitems/SWitems';
 
 
 function App() {
@@ -35,8 +35,9 @@ function App() {
   return (
     <div className="App">
       <Layout>
+        <SWitems/>
         <Switch>
-           <Route path = '/builder' component = {Burgerbuilder} />
+           <Route path = '/builder' component = {Builder} />
            <Route path = '/checkout' component = {Checkout} />
             <Privateroute path = "/Myprofile" component = {Myprofile}/>
             

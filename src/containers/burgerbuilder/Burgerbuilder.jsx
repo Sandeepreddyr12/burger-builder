@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
+import classes from "./burgerbuilder.module.css";
 import Burger from '../../components/burger/Burger';
 import Buildcontrols from '../../components/buildcontrols/Buildcontrols';
 import Modal from    '../../components/modal/Modal';
@@ -48,9 +50,12 @@ import * as actions from '../../redux/actions/index';
     }
 
     
+
     checkouthandler = () => {
 
     this.props.PurchaseInit();
+
+    console.log(this.props.history)
 
     this.props.history.push('/checkout');
     
@@ -117,7 +122,7 @@ import * as actions from '../../redux/actions/index';
 
     render() {
 
-        console.log(this.props.users)
+        console.log(this.props.product)
         const less_disabler = { ...this.props.ings };
          
         for(let key in less_disabler){
@@ -131,7 +136,7 @@ import * as actions from '../../redux/actions/index';
          let burger = this.props.error ? <p>page can't be loaded</p>: <Spinner/>
          
         if(this.props.ings){
-             burger = <React.Fragment> <Burger itemslist = {this.props.ings} /> 
+             burger = <React.Fragment> <Burger itemslist = {this.props.ings} product = {this.props.product} /> 
              <Buildcontrols
               items = {this.props.ings}
               adder = {this.props.IngredientAdder}
@@ -157,7 +162,7 @@ import * as actions from '../../redux/actions/index';
         // }    
 
         return (
-            <div>
+            <div className = {classes.bbcontainer}>
                 <Modal show = {this.state.modal_order}
                 modalexit = {this.modalremover}>
                     {ordersummary}
@@ -191,4 +196,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapPropsToState,mapDispatchToProps)(errorhandler(Burgerbuilder,axiosinstance));
+export default connect(mapPropsToState,mapDispatchToProps)(withRouter(errorhandler(Burgerbuilder,axiosinstance)));

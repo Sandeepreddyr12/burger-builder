@@ -1,10 +1,14 @@
 import React from 'react';
-import Items from './items/Items';
-import classes from './burger.module.css'
+// import Itemss from './items/Items';
+import classes from './burger.module.css';
+// import Items from './items/SWitems/SWitems';
+
 
  const Burger = (props) => {
-    
-// console.log(props)
+     
+let Items = props.product;
+
+console.log(Items)
 
 let DynamicItems = Object.keys(props.itemslist)
 .map(itemkey =>{
