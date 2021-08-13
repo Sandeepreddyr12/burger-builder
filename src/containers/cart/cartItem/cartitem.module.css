@@ -1,0 +1,72 @@
+.item{
+    width: 40rem;
+    height: 15rem;
+    background-color: rgb(182, 177, 177);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product{
+    width: 30%;
+    height: 85%;
+    background-color: aqua;
+    margin: auto;
+   
+}
+
+.description{
+    width: 60%;
+    height: 85%;
+    background-color: aquamarine;
+    margin: auto;
+    display: block;
+    font-size: .9rem;
+}
+
+.description .title{
+text-transform: uppercase;
+font-weight: 700;
+letter-spacing: .5px;
+margin: .5rem 0;
+}
+
+.price{
+    font-weight: 700;
+    color: red;
+    margin: .5rem 0;
+}
+
+.price span{
+    text-decoration:line-through;
+    color: black;
+    margin-right: .3rem;
+}
+
+.ingredients{
+    display: flex;
+    flex-flow: column;
+}
+
+.ingredients,.quantity{
+font-size: .85rem;
+color: rgb(95, 92, 92);
+margin: .2rem;
+text-transform: capitalize;
+}
+
+.buttons{
+    margin: 1rem 0;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttons span{
+    margin:  0 1rem;
+    text-transform: capitalize;
+}
+
+.buttons span:hover{
+    color: rgb(230, 40, 40);
+}

@@ -21,22 +21,22 @@ const SWitems = (props) => {
           break;
       
       case ('cheese') :
-          items = <div className={classes.Cheese}>
+          items = <div className ={classes.Cheese}>
         </div>
           break;
 
         case ('tomato') :
-          items = <div className={classes.Tomato}>
+          items = <div className = {classes.Tomato}>
         </div>
           break;
 
       case ('bread-top') :
-              items = <div className={classes.buntop}>
+              items = <div className = {classes.buntop}>
             </div>
           break;
 
           case ('bread-bottom') :
-          items = <div className={classes.bunbottom}>
+          items = <div className = {classes.bunbottom}>
                 </div>
           break;
 

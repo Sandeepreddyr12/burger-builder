@@ -13,7 +13,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import burgerbuildreducer from './redux/reducers/burgerbuilder';
 import orderNowreducer from './redux/reducers/OrderNow';
 import authReducer from './redux/reducers/auth';
-
+import cartReducer from './redux/reducers/cart';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -21,7 +21,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootreducer = combineReducers({
   bbreducer: burgerbuildreducer,
   orderNowreducer: orderNowreducer,
-  authReducer: authReducer
+  authReducer: authReducer,
+  cartReducer : cartReducer,
 })
 
 const store = createStore(rootreducer, composeEnhancers(applyMiddleware(thunk)));

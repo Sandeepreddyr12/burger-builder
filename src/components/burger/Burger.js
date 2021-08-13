@@ -8,7 +8,6 @@ import classes from './burger.module.css';
      
 let Items = props.product;
 
-console.log(Items)
 
 let DynamicItems = Object.keys(props.itemslist)
 .map(itemkey =>{

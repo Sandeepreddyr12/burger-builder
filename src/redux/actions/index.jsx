@@ -17,4 +17,9 @@ export {
     onlogoutFetch,
     verifyAuth,
     onAuthPathRedirect
-}from './auth'
+}from './auth';
+
+export {
+    itemCarted,
+    onItemRemoved
+}from './cart';

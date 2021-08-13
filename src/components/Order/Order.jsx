@@ -31,7 +31,7 @@ const Order = (props) => {
     <div className={classes.singleorder}>
       <span>Ingredients : {outingredients}</span>
       <span>
-        <strong>₹ {props.price}</strong>{" "}
+        <strong>₹ {props.price}</strong>
       </span>
     </div>
   );

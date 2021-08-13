@@ -1,5 +1,6 @@
 import React from 'react';
-import Buildcontrol from './buildcontrol/BuildControl'
+import Buildcontrol from './buildcontrol/BuildControl';
+import CartButton from '../../containers/cart/cartItem/cartbutton/CartButton';
 import classes from './buildcontrols.module.css';
 
 
@@ -19,11 +20,15 @@ let item = Object.keys(items).map(itemkey =>{
 return <div className = {classes.BuildControls}>
         <span className = {classes.Totalprice}>Totalprice: ₹ {props.Price.toFixed(2)}</span>
         {item}
+        
+        <div className = {classes.btns}>
+        <CartButton data = {{items :{...props.ingredients}, price : props.Price, productname :"Burger-Builder"}}/>
         <button
         className = {classes.OrderButton}
         disabled = {!props.orderbutton}
         onClick = {props.modalbtn}
         >{props.auth ? "ORDER NOW" : "signup to order"}</button>
+        </div>
         </div>
 }
 

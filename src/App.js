@@ -15,8 +15,7 @@ import Privateroute from './components/Privateroute/Privateroute';
 import * as actions from './redux/actions/index';
 
 import Homepage from './containers/Homepage/Homepage';
-import SWitems from './components/burger/items/SWitems/SWitems';
-
+import Cart from './containers/cart/Cart';
 
 function App() {
   // const [route,setroute] = useState(null)
@@ -30,12 +29,15 @@ function App() {
   },[])
 
 
+  // console.log(Checkout)
+  // console.log(Builder)
+
 
 
   return (
     <div className="App">
       <Layout>
-        <SWitems/>
+        {/* <Cart/> */}
         <Switch>
            <Route path = '/builder' component = {Builder} />
            <Route path = '/checkout' component = {Checkout} />

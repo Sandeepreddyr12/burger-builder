@@ -131,7 +131,6 @@ import * as actions from '../../redux/actions/index';
 
         let ordersummary = null;
 
-        
 
          let burger = this.props.error ? <p>page can't be loaded</p>: <Spinner/>
          
@@ -146,6 +145,10 @@ import * as actions from '../../redux/actions/index';
               orderbutton = {this.orderbtn(this.props.ings)}
               modalbtn = {this.modalbtn}
               auth = {this.props.authenticated}
+
+              ingredients = {this.props.ings}
+              Price = {this.props.totalprice}
+  
               />
               </React.Fragment>
 

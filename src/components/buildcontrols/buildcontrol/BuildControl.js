@@ -9,7 +9,7 @@ const Buldcontrol = (props) =>{
         disabled = {props.disabler} >less</button>
         <span className = {classes.Count}>{props.count}</span>
         <button className = {classes.More} 
-            onClick = {props.adder} >More</button>
+        onClick = {props.adder} >More</button>
     </div>
 }
 

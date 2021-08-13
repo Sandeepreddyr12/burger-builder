@@ -11,14 +11,15 @@
 }
 
 .header button {
-   height: 22px;
-   margin: 15px 15px 0 0;
+   height: 1.8rem;
+   margin: 1rem 1rem 0 0;
    outline: none;
    border: none;
    background: none;
    font-weight: bold;
-   font-size: large;
+   font-size: 1.5rem;
    cursor: pointer;
+   text-align: center;
 }
 
 .header button:hover{

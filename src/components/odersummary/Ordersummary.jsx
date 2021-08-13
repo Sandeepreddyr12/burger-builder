@@ -1,6 +1,6 @@
 import  React from 'react';
-import classes from './ordersummary.module.css'
-import Button from '../buttons/Buttons'
+import classes from './ordersummary.module.css';
+import Button from '../buttons/Buttons';
 
 const Ordersummary = (props) => {
  
@@ -11,7 +11,7 @@ const Ordersummary = (props) => {
         return <li key = {a}> {a} : {props.ingredients[a]}</li>
     })
 
-    
+    console.log(props)
 
     return(
     <React.Fragment>

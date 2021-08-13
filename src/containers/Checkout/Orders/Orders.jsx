@@ -47,7 +47,8 @@ class Orders extends Component {
 
 
     render() {
-        console.log(this.props.orders.length == true)
+
+console.log(this.props.orders)
 
        let orderpage  =  <Spinner/> 
 

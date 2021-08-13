@@ -73,9 +73,10 @@ export const orderStart = (orderdata) => {
             axiosinstance.get('/orders.json' + queryParams)   
         .then(res => {
             const fetchedorders = [];
+            console.log(res)
             for(let order in res.data){
                 fetchedorders.push({
-                    ...res.data[order],
+                    ...res.data[order], 
                     id : order,
                 })
             }

@@ -1,0 +1,98 @@
+.container{
+    background-color: rgb(233, 228, 228);
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 1px;
+}
+
+.title{
+    margin: 5rem 5rem 2rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: block;
+}
+
+.cart{
+    background-color: rgb(173, 194, 211);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart h3{
+    font-weight: 500;
+    border-bottom: 3px solid black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 3rem;
+}
+
+
+
+.checkout{
+    width: 25rem;
+    height: 100%;
+    background-color: rgb(233, 221, 202);
+    margin: 5rem 3rem 0 0;
+}
+
+.prices{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.columns{
+    border: 1px solid hsl(0, 11%, 79%);
+    height: 3.5rem;
+    margin: auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.prices div:first-child, .prices div:last-child{
+align-self: center;
+font-size: .8rem;
+font-weight: 700;
+cursor: pointer;
+} 
+
+.prices div:last-child{
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    height: 2rem;
+    border: none;
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.prices div:last-child:hover{
+    background-color: hsl(0, 0%, 20%);
+}
+
+.text{
+    text-align: center;
+    margin: 1.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+}

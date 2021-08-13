@@ -37,6 +37,9 @@ export const ON_PATHCHANGE = "ON_PATHCHANGE";
 // export const VERIFY_REQUEST = "VERIFY_REQUEST";
 // export const VERIFY_SUCCESS = "VERIFY_SUCCESS";
 
+// export const ON_INITCART = "ON_INITCART";
+export const ON_CARTED = "ON_CARTED";
+export const ON_CART_REMOVED = "ON_CART_REMOVED";
 
 
 

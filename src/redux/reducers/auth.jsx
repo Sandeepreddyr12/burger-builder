@@ -15,7 +15,7 @@ const initialState = {
     pathredirect : '/'
 }
 
-export default (
+const reducer =  (
     state = initialState,
     action
   ) => {
@@ -121,3 +121,5 @@ export default (
         return state;
     }
   };
+
+  export default reducer;
