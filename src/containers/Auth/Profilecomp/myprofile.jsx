@@ -29,7 +29,7 @@ const Myprofile = (props) => {
            </div>
             <div className = {classes.details}> 
               <span>hello <span>🙏🏻</span></span>
-              <div style = {{textTransform : "capitalize"}}><strong>📛  {props.users.name}</strong></div>
+              <div style = {{textTransform : "capitalize"}}><strong>📛  {props.users.name ? props.users.name :'hello user'}</strong></div>
             <div><strong>📧  {props.users.email}</strong></div>
             </div>
            </div>

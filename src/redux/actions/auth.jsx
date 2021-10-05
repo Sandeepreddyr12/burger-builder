@@ -1,14 +1,21 @@
 import  * as actiontype from "./actionType";
 import { auth } from '../../firebase';
+import { toast } from "react-toastify";
+
 
 
 export const signUpRequest = () => {
+  toast.loading("wait a moment ⌛, ur about to join us");
+
   return {
       type : actiontype.SIGNUP_REQUEST
   }
 }
 
 export const signUpSuccess = (name) => {
+  toast.dismiss();
+  toast.success(`welcome ${name ? name : 'here'} , thank u joining us`);
+
     return {
         type : actiontype.SIGNUP_SUCCESS,
         message : `welcome ${name ? name : 'here'} , thank u joining us`,
@@ -18,6 +25,8 @@ export const signUpSuccess = (name) => {
 
 
 export const signUpFailure = (error) => {
+  toast.dismiss();
+  toast.error( `${error}  😫`)
     return {
         type : actiontype.SIGNUP_ERROR,
         error : error,
@@ -29,6 +38,8 @@ export const signUpFailure = (error) => {
 
 
 export const loginRequest = () => {
+  toast.loading("wait a moment ⌛, ur about to join us");
+
   return {
       type : actiontype.LOGIN_REQUEST,
   }
@@ -37,6 +48,9 @@ export const loginRequest = () => {
 
 
 export const loginSuccess = (data) => {
+  toast.dismiss();
+  toast.success(`welcome back ${data.name ? data.name : '👨🏻'}`);
+
   return {
       type : actiontype.LOGIN_SUCCESS,
       uid : data.uid,
@@ -46,6 +60,8 @@ export const loginSuccess = (data) => {
 }
 
 export const loginFailure = (error) => {
+  toast.dismiss();
+  toast.error( `${error}  😫`)
   return {
       type : actiontype.LOGIN_FAILURE,
       error : error,
@@ -53,12 +69,15 @@ export const loginFailure = (error) => {
 }
 
 const logoutRequest = () => {
+  toast.loading("wait a moment ⌛");
   return {
     type: actiontype.LOGOUT_REQUEST
   };
 };
 
 const logoutSuccess = () => {
+  toast.dismiss();
+  toast.success('logged out,LOGIN to tummy full of happiness');
   return {
     type: actiontype.LOGOUT_SUCCESS,
     Message : 'logged out,login to tummy full of happiness'
@@ -66,6 +85,9 @@ const logoutSuccess = () => {
 };
 
 const logoutError = (error) => {
+  toast.dismiss();
+  toast.error( `${error}  😫`)
+
   return {
     type: actiontype.LOGOUT_FAILURE,
     error:error,
@@ -92,7 +114,6 @@ export const onAuthfetch = (email, password, isSignup,name, historyReplaceHandle
     dispatch(signUpRequest());
         auth.createUserWithEmailAndPassword(email, password)
         .then(userAuth => {
-          console.log(userAuth)
           userAuth.user.updateProfile({
             displayName: name,
           })
@@ -106,7 +127,6 @@ export const onAuthfetch = (email, password, isSignup,name, historyReplaceHandle
           }
           console.log(data)
           dispatch(signUpSuccess(data.name));
-              console.log('sign up success55')
           // auth.onAuthStateChanged((user) => {
           //   if (user.emailVerified) {
           //     // Email is verified
@@ -126,8 +146,9 @@ export const onAuthfetch = (email, password, isSignup,name, historyReplaceHandle
         })
       })
         .catch((error) => {
-          console.log(error.code)
           dispatch(signUpFailure(error.code));
+          toast.dismiss();
+          toast.error( `${error.code}  😫`);
         });
       }else{
         dispatch(loginRequest());

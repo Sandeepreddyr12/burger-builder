@@ -15,6 +15,7 @@ export const IngredientRemover = (ingname) => {
       ingredientName: ingname
     };
   };
+
   
 
 
@@ -39,7 +40,7 @@ export const IngredientRemover = (ingname) => {
                 dispatch(SetIngredients(res.data))
             })
             .catch(error =>{
-               ErrorIngredients()
+              dispatch (ErrorIngredients())
             })
     };
   };

@@ -10,14 +10,24 @@ import  * as actiontype from "./actionType";
     }
   }
 
-  export const onItemRemoved = (item) => {
+  export const onItemRemoved = (id) => {
     return {
-        type : actiontype.ON_CART_REMOVED,
-        itemname : item,
+        type : actiontype.ON_ITEM_REMOVED,
+        id : id,
     }
   }
 
 
-//   export const initialCart = (item) => {
-//     return dispatch(itemCarted(item))
-//   }
+
+  export const cartItemDecrement = (id) => {
+    return {
+        type : actiontype.CART_ITEM_DECREMENT,
+        id : id,
+    }
+  }
+
+  export const cartClear = () => {
+    return {
+        type : actiontype.ON_CLEAR_CART,
+    }
+  }

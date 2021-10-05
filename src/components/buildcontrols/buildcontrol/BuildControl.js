@@ -4,12 +4,12 @@ import classes from'./buildcontrol.module.css'
 const Buldcontrol = (props) =>{
    return <div className = {classes.BuildControl}>
         <span className = {classes.Label}>{props.itemlabel}</span>
-        <button className = {classes.Less}
+        <div className = {classes.btnscomp}> <button className = {classes.Less}
         onClick = {props.remover} 
-        disabled = {props.disabler} >less</button>
+        disabled = {props.disabler} >Less</button>
         <span className = {classes.Count}>{props.count}</span>
         <button className = {classes.More} 
-        onClick = {props.adder} >More</button>
+        onClick = {props.adder} >More</button></div> 
     </div>
 }
 

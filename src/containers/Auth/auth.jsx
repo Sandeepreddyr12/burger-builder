@@ -11,8 +11,6 @@ import formvalidater from "../../components/formvalidation/formvalidator";
 import Spinner from "../../components/spinners/Spinners"
 
 
-
-
 const Auth = (props) =>  {
 const [signinForm, setsigninForm] = useState({
   Name : null,
@@ -49,6 +47,8 @@ Password: {
 const [isSignUp, setisSignUp] = useState(false)
 const [validationMessage, setvalidationMessage] = useState(null)
 const [formvalid, setformvalid] = useState(false)
+ 
+
 
  const updatedform = {
     ...signinForm,
@@ -187,12 +187,6 @@ setformvalid(formValid)
   
     
 
-    
-
- 
-
-
-
     const Switchbtn = {
          borderRadius : "0px",
          width : "94%",
@@ -263,6 +257,8 @@ setformvalid(formValid)
   if(props.authenticated){
     authredirect = <Redirect to = {props.RedirectedPath}/>
   }
+
+
 
     return (
       <div className = {classes.authcomponent}>

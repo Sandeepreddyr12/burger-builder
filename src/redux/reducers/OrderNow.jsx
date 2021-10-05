@@ -3,14 +3,12 @@ import * as actiontype from '../actions/actionType';
 const initialstate = {
     orderdata :  [],
     Loading: false,
-    Purchased : false
+    Purchased : false,
 }
 
 
 const reducer = (state = initialstate, action) => {
     switch (action.type) {
-
-       
 
         case actiontype.ORDER_SUCCESS:
 

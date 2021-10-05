@@ -1,4 +1,12 @@
 .cartbutton button{
 background-color: salmon;
-border-radius: 0;
+margin: .3rem;
+}
+
+.cartbutton :first-child{
+    background-color: green;
+}
+
+.cartbutton :disabled{
+    background-color: #C7C6C6;
 }

@@ -8,23 +8,50 @@ const initialState = {
 const cartReducer = (state = initialState, action) =>{
 switch(action.type){
     case actiontype.ON_CARTED:
-        return{
-            ...state,
-            products : action.itemname,
-        
+
+        let existed_item=  state.products.find(item=>  action.itemname.id === item.id)
+
+        if (existed_item) {
+            existed_item.quantity += 1
+            return {
+                ...state,
+                products : [...state.products]
+            }
+        }else{
+            return{
+                ...state,
+                products : [...state.products, action.itemname],
+            
+            }
         }
 
-        // case actiontype.ON_CART_REMOVED:
-        // return{
-        //     ...state,
-        //     products : products.map(a => a != action.itemname)
+        break;
 
-        //     // products : [
-        //     //     ...state.products,
-        //     //     ...products.map(a => {a != action.itemname})
-        //     // ]
-        // }
-        default:
+        case actiontype.ON_ITEM_REMOVED:
+            return {
+                ...state,
+                products : state.products.filter(cartItem=>cartItem.id !== action.id )}
+                break;
+
+         case actiontype.CART_ITEM_DECREMENT:
+
+            let decremeting =  state.products.find(item=>  action.id === item.id)
+                decremeting.quantity -= 1;
+            
+                    return {
+                        ...state,
+                        products : [...state.products]
+                    }
+                        break;
+        
+        case actiontype.ON_CLEAR_CART:
+            
+                    return {
+                        ...initialState,
+                    }
+                        break;
+        
+                default:
       return state;
 }
 }

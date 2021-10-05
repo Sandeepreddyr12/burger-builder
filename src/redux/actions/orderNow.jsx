@@ -1,8 +1,11 @@
 
 import  * as actiontype from "./actionType";
 import axiosinstance from "../../axios-orders"
+import { toast } from "react-toastify";
 
 export const orderSuccess = (id , orderdata) => {
+    toast.dismiss();
+       toast.success("Order placed 👌");
     return {
         type : actiontype.ORDER_SUCCESS,
         id : id,
@@ -11,6 +14,9 @@ export const orderSuccess = (id , orderdata) => {
 }
 
 export const orderFailure = (error) => {
+    toast.dismiss();
+    toast.error(' "ERROR" Order not placed 😫');
+
     return {
         type : actiontype.ORDER_FAILURE,
         error : error
@@ -18,6 +24,8 @@ export const orderFailure = (error) => {
 }
 
 export const onOrderstart = () => {
+    toast.dismiss();
+    toast.loading("wait a moment ⌛");
     return {
         type : actiontype.ON_ORDERSTART,
     }
@@ -47,6 +55,7 @@ export const orderStart = (orderdata) => {
 
 
     export const OrdersSuccess = (fetcheditems) => {
+        toast.dismiss();
         return {
             type : actiontype.ORDERS_SUCCESS,
             orders : fetcheditems
@@ -54,6 +63,8 @@ export const orderStart = (orderdata) => {
     }
 
     export const OrdersFailure = (error) => {
+        toast.dismiss();
+        toast.error(`${error} "ERROR Occured😫'`);
         return {
             type : actiontype.ORDERS_FAILURE,
             error: error
@@ -61,6 +72,7 @@ export const orderStart = (orderdata) => {
     }
 
     export const OrdersStart = () => {
+        toast.loading("wait a moment ⌛, fetching your Orders");
         return {
             type : actiontype.ORDERS_START,
         }
@@ -73,7 +85,7 @@ export const orderStart = (orderdata) => {
             axiosinstance.get('/orders.json' + queryParams)   
         .then(res => {
             const fetchedorders = [];
-            console.log(res)
+            
             for(let order in res.data){
                 fetchedorders.push({
                     ...res.data[order], 

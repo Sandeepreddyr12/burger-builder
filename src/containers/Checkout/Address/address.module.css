@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+.header{
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+}
+
 .form{
     margin: auto;
 }
@@ -24,6 +30,8 @@
 .form input:focus::placeholder{
     color: transparent;
 }
+
+
 
 .validation{
     color: #ff0039;

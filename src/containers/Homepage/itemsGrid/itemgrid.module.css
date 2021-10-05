@@ -38,9 +38,6 @@
 
 }
 
-.grid > div {
-  /* outline: blue 2px solid; */
-}
 
 
 
@@ -179,5 +176,6 @@
 .grid>img{
   max-width: 100%;
   height: auto;
+
 }
 }

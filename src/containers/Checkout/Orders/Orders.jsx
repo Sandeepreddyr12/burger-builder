@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import classes from './orders.module.css';
 import Order from '../../../components/Order/Order';
 import axiosinstance from '../../../axios-orders';
@@ -9,6 +12,7 @@ import Spinner from '../../../components/spinners/Spinners';
 import Buttons from '../../../components/buttons/Buttons';
 
 import * as actions from '../../../redux/actions/index';
+
 
 
 
@@ -48,7 +52,6 @@ class Orders extends Component {
 
     render() {
 
-console.log(this.props.orders)
 
        let orderpage  =  <Spinner/> 
 
@@ -57,7 +60,8 @@ console.log(this.props.orders)
               {this.props.orders.length ? this.props.orders.map( order => (
                 <Order 
                 key = {order.id}
-                ingredients = {order.Items}
+                Ingredients = {order.Items}
+                products = {order}
                 price = {order.Totalprice}
                 />)
                 ) : <div className = {classes.norders}>No Orders Placed. 
@@ -67,6 +71,8 @@ console.log(this.props.orders)
         }
         return  (
             <div className = {classes.container}>
+                <ToastContainer/> 
+                <div className = {classes.title}>My Orders</div>
                 {orderpage}
             </div>
         )

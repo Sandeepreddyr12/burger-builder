@@ -22,7 +22,7 @@ return <div className = {classes.BuildControls}>
         {item}
         
         <div className = {classes.btns}>
-        <CartButton data = {{items :{...props.ingredients}, price : props.Price, productname :"Burger-Builder"}}/>
+        <CartButton data = {{items : {...props.items}, price : props.Price, productname :"Burger-Builder", id : props.Price+'burger-builder', quantity : 1}} disabler = {props.Price <= 25}/>
         <button
         className = {classes.OrderButton}
         disabled = {!props.orderbutton}

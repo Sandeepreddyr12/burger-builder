@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import classes from "./address.module.css";
 import Button from "../../../components/buttons/Buttons";
 import axiosinstance from "../../../axios-orders";
@@ -100,14 +103,42 @@ class Address extends Component {
       formdata[inputidentifier] = this.state.orderform[inputidentifier].value;
     }
 
-    const order = {
-      Items: this.props.ings,
-      Totalprice: this.props.totalprice,
-      customer: formdata,
-      userId : this.props.UID
-    };
 
-    this.props.orderinitiater(order);
+    if(this.props.fromcart){
+
+      this.props.items.map(item =>{
+       let cartorder = {
+          Totalprice : item.price,
+          customer: formdata,
+          userId : this.props.UID,
+          Items : item,
+          quant : item.quantity
+        }
+        this.props.orderinitiater(cartorder);
+      })
+
+      // order = {
+      //   ItemsCount : this.props.TotItems,
+      //   Totalprice : this.props.TotPrice,
+      //   customer: formdata,
+      //   userId : this.props.UID,
+      //   Items : this.props.items
+      // }
+    }else {
+     const order = {
+        Items: {items : this.props.ings},
+        Totalprice: this.props.totalprice,
+        customer: formdata,
+        userId : this.props.UID,
+        quant : 1
+      };
+      this.props.orderinitiater(order);
+    }
+
+    
+
+    
+
 
     // axiosinstance
     //   .post("/orders.json", order)
@@ -192,7 +223,8 @@ class Address extends Component {
 
     return (
       <div className={classes.formContainer}>
-        <h4>Add ur Address</h4>
+        <ToastContainer autoClose={4000} />
+        <h4 className = {classes.header}>Add ur Address</h4>
         <div className={classes.validation}>{this.state.feedbackMessage}</div>
         {form}
       </div>
@@ -205,7 +237,8 @@ const mapPropsToState = (state) => {
     ings: state.bbreducer.ingredients,
     totalprice: state.bbreducer.totalprice,
     Loading: state.orderNowreducer.Loading,
-    UID : state.authReducer.uid
+    UID : state.authReducer.uid,
+
   };
 };
 

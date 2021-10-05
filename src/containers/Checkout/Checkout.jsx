@@ -34,6 +34,7 @@ class Checkout extends Component {
     this.props.history.goBack();
   };
 
+
   continuedHandler = () => {
     this.props.history.replace("/checkout/address");
   };
@@ -41,7 +42,7 @@ class Checkout extends Component {
   render() {
     let summary = <Redirect to="/" />;
 
-    
+
 
     if (this.props.ings) {
       let purchasedredirect = this.props.purchased ? <Redirect to="/" /> : null;

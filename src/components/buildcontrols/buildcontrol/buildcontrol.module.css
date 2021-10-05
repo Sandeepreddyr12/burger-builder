@@ -1,16 +1,24 @@
 .BuildControl {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 5px 0;
+    margin: .3rem 0;
+    flex-wrap: wrap;
 }
 
+.btnscomp{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
 
 .BuildControl button {
     display: block;
     font: inherit;
-    padding: 5px;
-    margin: 0 5px;
+    padding: .3em;
+    margin: 0 0.3rem;
     width: 5em;
     border: 1px solid #AA6817;
     cursor: pointer;
@@ -31,16 +39,16 @@
 }
 .Count{
     width : 2em;
-    padding: 10px;
+    padding: .6em;
     text-align: center;
     background-color: coral;
     font-weight: bold;
 }
 
 .Label {
-    padding: 10px;
+    padding: .6rem;
     font-weight: bold;
-    width: 80px;
+    width: 5rem;
     text-transform:capitalize;
 }
 

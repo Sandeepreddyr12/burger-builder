@@ -1,72 +1,99 @@
-.item{
-    width: 40rem;
-    height: 15rem;
-    background-color: rgb(182, 177, 177);
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
+.item {
+  width: 40rem;
+  min-height: 15rem;
+  /* max-width: 100%; */
+  background-color: rgb(233, 220, 220);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  /* background-color: hsl(207, 60%, 85%); */
+  border-bottom: 5px solid rgb(205, 90, 109);
+
 }
 
-.product{
-    width: 30%;
-    height: 85%;
-    background-color: aqua;
-    margin: auto;
-   
+.product {
+  max-width: 30%;
+  margin: auto;
 }
 
-.description{
-    width: 60%;
-    height: 85%;
-    background-color: aquamarine;
-    margin: auto;
-    display: block;
-    font-size: .9rem;
+.product img {
+  max-height: 85%;
+  object-fit: contain;
+  width: 100%;
 }
 
-.description .title{
-text-transform: uppercase;
-font-weight: 700;
-letter-spacing: .5px;
-margin: .5rem 0;
+.description {
+  max-width: 60%;
+  max-height: 85%;
+  margin: auto;
+  display: block;
+  font-size: 0.9rem;
 }
 
-.price{
-    font-weight: 700;
-    color: red;
-    margin: .5rem 0;
+.description .title {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0;
 }
 
-.price span{
-    text-decoration:line-through;
-    color: black;
-    margin-right: .3rem;
+.price {
+  font-weight: 700;
+  color: red;
+  margin: 0.5rem 0;
 }
 
-.ingredients{
-    display: flex;
-    flex-flow: column;
+.price span {
+  text-decoration: line-through;
+  color: black;
+  margin-right: 0.3rem;
 }
 
-.ingredients,.quantity{
-font-size: .85rem;
-color: rgb(95, 92, 92);
-margin: .2rem;
-text-transform: capitalize;
+.ingredients {
+  display: flex;
+  flex-flow: column;
+  font-weight: bold;
 }
 
-.buttons{
-    margin: 1rem 0;
-    text-decoration: underline;
-    font-weight: 500;
-    cursor: pointer;
+.ingredients,
+.quantity {
+  font-size: 0.85rem;
+  color: rgb(34, 28, 28);
+  margin: 0.2rem;
+  text-transform: capitalize;
 }
 
-.buttons span{
-    margin:  0 1rem;
-    text-transform: capitalize;
+
+.buttons {
+  margin: 3rem 0 0;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.buttons span:hover{
-    color: rgb(230, 40, 40);
+.buttons span {
+  margin: 0 1rem;
+  text-transform: capitalize;
+}
+
+.buttons span:hover {
+  color: rgb(230, 40, 40);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.quantity {
+  width: 70%;
+}
+
+@media (max-width: 500px) {
+  .item {
+      flex-wrap: wrap;
+      justify-content:space-around;
+  }
 }

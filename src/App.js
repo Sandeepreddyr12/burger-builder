@@ -1,8 +1,9 @@
 import React, { useEffect} from 'react';
 import { Route, Switch,Redirect} from 'react-router-dom';
-import { useDispatch} from 'react-redux'
+import { useDispatch} from 'react-redux';
 
-// import { auth } from './firebase';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import './App.css';
 import Layout from './components/layout/Layout';
@@ -16,6 +17,8 @@ import * as actions from './redux/actions/index';
 
 import Homepage from './containers/Homepage/Homepage';
 import Cart from './containers/cart/Cart';
+import Offerings from './components/offerings/Offerings';
+
 
 function App() {
   // const [route,setroute] = useState(null)
@@ -29,18 +32,20 @@ function App() {
   },[])
 
 
-  // console.log(Checkout)
-  // console.log(Builder)
-
 
 
   return (
     <div className="App">
+      <ToastContainer autoClose={2000} />
       <Layout>
-        {/* <Cart/> */}
+        {/* <Offerings/>
+        <Cart/> */}
+        {/* <Orders/> */}
         <Switch>
            <Route path = '/builder' component = {Builder} />
            <Route path = '/checkout' component = {Checkout} />
+           <Route path = '/offerings' component = {Offerings} />
+           <Route path = '/cart' component = {Cart} />
             <Privateroute path = "/Myprofile" component = {Myprofile}/>
             
            <Privateroute path = '/orders' component = {Orders} />

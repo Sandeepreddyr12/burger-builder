@@ -1,0 +1,23 @@
+.container{
+    /* background: #fefefe; */
+  font-family: sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2.5rem 5rem 0;
+  font-style: italic;
+  top: 2.5rem;
+  text-transform: uppercase;
+}
+
+.page{
+  background: #F8F6F3;
+  border-top: 1px solid transparent;  
+}

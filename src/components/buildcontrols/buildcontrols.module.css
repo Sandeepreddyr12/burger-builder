@@ -17,18 +17,20 @@
 }
 
 .btns{
+    width: 25rem;
+    max-width: 90%;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: space-between;
 }
 
-.btns button{
-    padding: .7em 1.4em;
 
-}
 
 .OrderButton {
     background-color: #DAD735;
     outline: none;
-    margin-left: 3.70rem;
     cursor: pointer;
     border: 1px solid #966909;
     color: #966909; 
@@ -64,5 +66,14 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width : 400px) {
+    .btns{
+        justify-content: space-around;
+    }
+    .OrderButton{
+        margin-top: 1rem;
     }
 }

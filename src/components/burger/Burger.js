@@ -1,12 +1,12 @@
 import React from 'react';
-// import Itemss from './items/Items';
+import Items from './items/Items';
 import classes from './burger.module.css';
 // import Items from './items/SWitems/SWitems';
 
 
  const Burger = (props) => {
      
-let Items = props.product;
+// let Items = props.product;
 
 
 let DynamicItems = Object.keys(props.itemslist)

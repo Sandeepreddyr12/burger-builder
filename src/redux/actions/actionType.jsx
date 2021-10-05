@@ -39,7 +39,9 @@ export const ON_PATHCHANGE = "ON_PATHCHANGE";
 
 // export const ON_INITCART = "ON_INITCART";
 export const ON_CARTED = "ON_CARTED";
-export const ON_CART_REMOVED = "ON_CART_REMOVED";
+export const ON_ITEM_REMOVED = "ON_ITEM_REMOVED";
+export const CART_ITEM_DECREMENT = "CART_ITEM_DECREMENT";
+export const ON_CLEAR_CART = "ON_CLEAR_CART";
 
 
 

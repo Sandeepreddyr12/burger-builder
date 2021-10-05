@@ -14,12 +14,13 @@ const Ordersummary = (props) => {
     console.log(props)
 
     return(
-    <React.Fragment>
+    
+    <div className = {classes.container}>
         <div className = {classes.header}>
        <p>ORDER SUMMARY</p>
-       <button
+       {/* <button
        onClick = {props.modalexit}
-       >&times;</button>
+       >&times;</button> */}
        </div>
 
         <ul className = {classes.items}>
@@ -31,7 +32,8 @@ const Ordersummary = (props) => {
         <Button clicked = {props.checkout}
         btntype = 'success'>Check Out?</Button>
         </div>
-    </React.Fragment>
+        </div>
+    
  )}
 
  export default Ordersummary;

@@ -23,7 +23,7 @@ const Itemgrid = () => {
         </div>
         <div className={classes.cimg1}></div>
         <div className={classes.cimg2}></div>
-        <div className={classes.simg1}></div>
+        <div className={classes.simg1}></div>  
         <div className={classes.text2}>
         <span>GRILLED NEWS</span>
           <h3>

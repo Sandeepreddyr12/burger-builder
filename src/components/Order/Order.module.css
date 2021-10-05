@@ -1,6 +1,6 @@
 .singleorder{
     width: 650px;
-  max-width: 80%;
+    max-width: 80%;
     /* height: 75px; */
     border: 2px solid lightgray;
     box-shadow: 0px 1px 5px gray;
@@ -9,11 +9,30 @@
    margin: 15px auto;
    background: rgb(238, 232, 232);
    border-top: 5px solid slateblue;
+
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
 }
 
 
-.singleorder span{
+/* .singleorder span{
 display: block;
+} */
+
+.product{
+  flex: 2 auto 40%;
+}
+
+.address{
+  flex:3 auto 60%;
+  padding-left: 2rem;
+}
+
+.product > div , .address > div{
+  padding: .3em;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 

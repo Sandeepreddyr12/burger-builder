@@ -1,6 +1,4 @@
 .header{
-    display: flex;
-    justify-content: space-between;
     font-weight: bold;
     color: green;
     border-bottom: 2px solid salmon ;
@@ -10,7 +8,7 @@
     padding-left: 30px;
 }
 
-.header button {
+/* .header button {
    height: 1.8rem;
    margin: 1rem 1rem 0 0;
    outline: none;
@@ -20,11 +18,11 @@
    font-size: 1.5rem;
    cursor: pointer;
    text-align: center;
-}
+} */
 
-.header button:hover{
+/* .header button:hover{
     background-color: orange;
-}
+} */
 
 .items{
     text-transform: capitalize;

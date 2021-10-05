@@ -21,5 +21,7 @@ export {
 
 export {
     itemCarted,
-    onItemRemoved
+    onItemRemoved,
+    cartItemDecrement,
+    cartClear
 }from './cart';
