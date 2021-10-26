@@ -1,3 +1,8 @@
+.container{
+    width: 100%;
+    min-height: 25rem;
+}
+
 .component{
     position: relative;
     top: 5rem;
@@ -34,7 +39,7 @@ flex-wrap: wrap;
 }
 
 .component button{
-    width : 30%;
+    width : 8rem;
     box-sizing : border-box;
     margin-top : 1rem;
     /* margin-left: 8%; */
@@ -47,6 +52,8 @@ flex-wrap: wrap;
    font-weight: bolder;
    font-size: large;
    letter-spacing: 1px;
+   text-align: center;
+   vertical-align: middle;
 }
 
 .details div{

@@ -2,10 +2,11 @@
     position: relative;
     height: 40rem;
     width: 100%;
-    /* background-image: url('/images/background.jpg') ; */
+    /* background-image: url('/images/background.jpg'); */
     background-size: cover;
     /* background-color: #ad5a5a; */
     transition: all .5s;
+    margin-top: 4.2rem;
 }
 
 .blocks{

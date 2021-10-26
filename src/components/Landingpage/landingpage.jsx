@@ -9,6 +9,9 @@ import Slider from "./Slider/Slider";
 import Buttons from "../buttons/Buttons";
 import Colorpicker from "../../colorpicker/Colorpicker";
 
+const LazySlider = React.lazy(() => import('./Slider/Slider'))
+
+
 const Landingpage = () => {
   const [itemName, setitemName] = useState(<span>Burger  <FaHamburger/></span>);
   const [index, setindex] = useState(0);
@@ -110,9 +113,9 @@ const Landingpage = () => {
           </div>
         </div>
         <div className={classes.floatburger}>
-          <Slider slider={itemName} 
+        <React.Suspense fallback = 'loading....'>   <LazySlider slider={itemName} 
           indexhandler = {(num)=>indexnumb(num)}
-          />
+          /></React.Suspense>
         </div>
       <div className = {classes.logocontainer}>
         <div className = {classes.colorpickers}>

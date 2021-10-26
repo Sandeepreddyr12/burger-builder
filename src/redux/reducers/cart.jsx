@@ -25,13 +25,12 @@ switch(action.type){
             }
         }
 
-        break;
 
         case actiontype.ON_ITEM_REMOVED:
             return {
                 ...state,
                 products : state.products.filter(cartItem=>cartItem.id !== action.id )}
-                break;
+
 
          case actiontype.CART_ITEM_DECREMENT:
 
@@ -42,14 +41,12 @@ switch(action.type){
                         ...state,
                         products : [...state.products]
                     }
-                        break;
         
         case actiontype.ON_CLEAR_CART:
             
                     return {
                         ...initialState,
                     }
-                        break;
         
                 default:
       return state;

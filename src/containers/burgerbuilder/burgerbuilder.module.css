@@ -1,5 +1,7 @@
 .bbcontainer{
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh;
     background-color: rgb(250, 234, 223);
+    overflow-x: hidden;
+    position: relative;
 }

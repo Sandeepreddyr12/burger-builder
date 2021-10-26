@@ -27,7 +27,7 @@ const reducer = (state = initialState, action) => {
 
         totalprice: state.totalprice + price[action.ingredientName],
       };
-      break;
+
 
     case actiontype.INGREDIENT_REMOVER:
       return {
@@ -39,7 +39,7 @@ const reducer = (state = initialState, action) => {
         },
         totalprice: state.totalprice - price[action.ingredientName],
       };
-      break;
+
 
 
       case actiontype.FETCHED_INGREDIENTS:
@@ -50,7 +50,7 @@ const reducer = (state = initialState, action) => {
         error : false,
         building : false,
       };
-      break;
+
 
       case actiontype.INGREDIENTS_ERROR:
         return {
@@ -58,7 +58,7 @@ const reducer = (state = initialState, action) => {
           error : true,
 
         };
-        break;
+  
 
     default:
       return state;

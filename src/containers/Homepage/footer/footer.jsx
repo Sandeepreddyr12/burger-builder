@@ -23,13 +23,13 @@ const Footer = () => {
               <h6>Products</h6>
               <ul className={classes.footerlinks}>
                 <li>
-                  <a href="#">Burger</a>
+                  <a href="/#">Burger</a>
                 </li>
                 <li>
-                  <a href="#">Sandwich</a>
+                  <a href="/#">Sandwich</a>
                 </li>
                 <li>
-                  <a href="#">Coffe</a>
+                  <a href="/#">Coffe</a>
                 </li>
               </ul>
             </div>
@@ -38,16 +38,16 @@ const Footer = () => {
               <h6>Quick Links</h6>
               <ul className={classes.footerlinks}>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="/#">Contact Us</a>
                 </li>
                 <li>
-                  <a href="#">Contribute</a>
+                  <a href="/#">Contribute</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="/#">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#">Sitemap</a>
+                  <a href="/#">Sitemap</a>
                 </li>
               </ul>
             </div>
@@ -59,29 +59,29 @@ const Footer = () => {
             <div className={classes.columns}>
               <p className={classes.copyrighttext}>
                 Copyright &copy; 2021 All Rights Reserved by
-                <a href="#">  Grilled^Souls</a>.
+                <a href="/#">  Grilled^Souls</a>.
               </p>
             </div>
 
             <div className={classes.columns}>
               <ul className={classes.socialicons}>
                 <li>
-                  <a className={classes.facebook} href="#">
+                  <a className={classes.facebook} href="/#">
                     <i><FaFacebookSquare/></i>
                   </a>
                 </li>
                 <li>
-                  <a className={classes.twitter} href="#">
+                  <a className={classes.twitter} href="/#">
                     <i><FaTwitterSquare/></i>
                   </a>
                 </li>
                 <li>
-                  <a className={classes.linkedin} href="#">
+                  <a className={classes.linkedin} href="/#">
                     <i><FaLinkedin/></i>
                   </a>
                 </li>
                 <li>
-                  <a className={classes.github} href="#">
+                  <a className={classes.github} href="/#">
                     <i><FaGithubSquare/></i>
                   </a>
                 </li>

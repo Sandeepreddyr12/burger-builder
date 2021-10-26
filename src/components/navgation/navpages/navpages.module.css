@@ -21,7 +21,7 @@
 }
 
 .navpages{
-  margin-right: 5rem;
+  margin-right: 8vw;
 }
 
   
@@ -31,6 +31,10 @@
     align-items: center;
     justify-content: center;
     height: 2.5rem;
+    text-transform: capitalize;
+    margin-left: 4vw; 
+    position: relative;
+   
   }
   
   
@@ -39,7 +43,7 @@
    padding: .5em;
    text-decoration: none;
    color: black;
-   font-size: 1rem;
+   font-size: .7rem;
    font-weight: bold;
    transition: all 0.2s ease;
    letter-spacing: .5px;
@@ -51,19 +55,31 @@
     color: salmon;
   }
   
+  .profimg{
+        background-color: rgb(212, 238, 238);
+        width : 1.4rem;
+        height : 1.4rem;     
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: .2rem;
+        outline: 3px solid green;
+}
 
+.profimg img{
+    max-width: 100%;
+}
   
   
   /* Dropdown Menu */
   
   .dropdown {
     position: absolute;
-    top: 2.5rem;
+    top: 2.9rem;
     width: 300px;
     transform: translateX(-15%);
     background-color: var(--bg);
     border: var(--border);
-    border-radius: var(--border-radius);
+    border-radius: 20px;
     padding: 1rem;
     overflow: hidden;
     transition: height var(--speed) ease;
@@ -81,17 +97,22 @@
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.1rem;
+   
   }
   
-  .menu li:last-child button{
-        margin: auto;
-  }
+  
   
   .menu li:hover {
     background-color: #525357;
     padding-left: 1rem;
-    transition: padding var(--speed) ease-out;
+    transition: padding 200ms ease-out;
     }
+
+    .menu li:hover :last-child{
+      color: white;
+    }
+
+   
 
   .menu li a{
     color: gray;
@@ -100,39 +121,121 @@
     display: flex;
     align-items: center;
     text-decoration: none !important;
+    border-bottom: none !important;
   }
 
+  .menu li button{
+    margin: auto;
+    height: 70%;
+    width: 50%;
+    font-size: .9rem;
+}
 
-     @media (max-width : 605px){
+.menu li button div{
+  color: white;
+  font-size: .9rem;
+
+}
+
+  .profileText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .downIcon{
+    /* padding-left: .3rem; */
+    text-align: center;
+    transition: all .3s ease;
+    display: block;
+  }
+
+  .authbtn{
+   margin-left: 1.5rem;
+   border: 2px solid rgb(168, 168, 218);
+   width: 100%;
+   cursor: pointer;
+  }
+  .authbtn li{
+    width: 100%;
+  }
+
+  .authbtn li a{
+    width: 100%;
+    font-size: .8rem;
+  }
+  .authbtn li a{
+    border-bottom: none !important;
+  }
+
+  .authbtn:hover{
+    border: 2px solid red;
+  }
+
+     @media (max-width : 700px){
+      .navpages{
+        width: 100%;
+      }
          .navpages ul{
              height: 100%;
              width: 100%;
              flex-flow: column;
              align-items: center;
+            }
             
-    }
-
-
-    .navpages ul li{
-        justify-content: space-around;
+            
+            .navpages ul li{
+      /* background-color: rgb(230, 248, 248); */
         align-content: center;
         width: 100%;
         padding: .5em 0;
-        margin-bottom: 2rem;
-         transition: all .5s; 
+        margin-bottom: 1rem;
+         transition: all .5s ease-out; 
+         padding-left: 2rem;
      }
 
      .navpages ul li a{
         letter-spacing: 2px;
         font-size: 1rem;
-        transition: all .5s;
+        transition: all .1s;
      }
      
      .navpages ul li:hover{
-         background: lightgray;
+         background: hsl(0, 22%, 5%);
+     }
+
+     
+     .navitem{
+       margin: auto;
+       width: 100%;
+       margin-top: 2rem;
+     }
+     .navitem .profimg{
+       display: none;
+     }
+     .link{
+       color: white;
+       font-size: 1.5rem;
+       letter-spacing: 2px;
      }
 
      .dropdown{
-       position: relative;
-     }
+      left: 0;
+      /* top: 2rem; */
+      transform: translateX(0);
+      width: 100%;
+    }
+    .menu li:hover :last-child{
+      color: salmon;
+    }
+
+    .authbtn{
+      width: 100%;
+      margin: auto;
+      margin-top: 2rem;
+      text-align: center;
+      border: none !important;
+    }
+
     }

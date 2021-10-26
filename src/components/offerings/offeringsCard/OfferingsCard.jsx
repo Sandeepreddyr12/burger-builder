@@ -11,11 +11,11 @@ console.log(props.details)
 
 let prices;
 
-if(formSelect == 'Medium'){
+if(formSelect === 'Medium'){
   prices = props.details.cost;
-}else if(formSelect == 'Small'){
+}else if(formSelect === 'Small'){
   prices = props.details.cost - (0.3 * (props.details.cost));
-}else if(formSelect == 'Large'){
+}else if(formSelect === 'Large'){
   prices = props.details.cost + (0.3 * (props.details.cost));
 }
 

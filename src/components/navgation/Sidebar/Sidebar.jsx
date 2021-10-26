@@ -9,7 +9,7 @@ let styles = props.show ? [classes.sidebar, classes.open].join(' ') : classes.si
             <div className = {classes.profimg}>
             <img src="/images/profileimg.png" alt="profile" />
              </div>
-           <Navpages/>
+           <Navpages modalexit = {props.modalexit}/>
         </div>
     )
 }

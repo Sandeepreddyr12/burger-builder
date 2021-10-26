@@ -9,3 +9,11 @@
     margin: auto;
 }
 
+.btns{
+    width: 350px;
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+

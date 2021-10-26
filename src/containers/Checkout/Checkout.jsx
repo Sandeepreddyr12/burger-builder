@@ -49,7 +49,7 @@ class Checkout extends Component {
       
       
       summary = (
-        <div>
+        <div style = {{margin : '6rem 0'}}>
           {purchasedredirect}
           <CheckoutSummary
             cancelledHandler={this.cancelledHandler}

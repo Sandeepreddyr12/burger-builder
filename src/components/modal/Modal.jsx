@@ -11,10 +11,13 @@ return(
         <Overlay show_overlay = {props.show}
         modalexit = {props.modalexit}/>
 
+        <div className = {classes.modalcontainer}>
         <div className = {classes.container}
      style = {{
          transform : props.show ? 'translateY(0)' : 'translateY(-150vh)',
-         opacity : props.show ? '1' : '0'
+         opacity : props.show ? '1' : '0',
+         top : props.positionHandler,
+         width : props.SetWidth,
      }}
      >
             <div className = {classes.exitbtn}><button
@@ -22,6 +25,7 @@ return(
        >&times;</button>
        </div>
         {props.children}
+    </div>
     </div>
     </React.Fragment>
     )}

@@ -68,15 +68,17 @@ const [formvalid, setformvalid] = useState(false)
 }
   
   useEffect(() => {
-    if(!props.Burgerbuilding && props.RedirectedPath !== '/'){
-      props.PathRedirect();
+    if (props.location.state === 'fromCart') {
+      props.history.goForward();
+    }else{
+      if(!props.Burgerbuilding && props.RedirectedPath !== '/'){
+        props.PathRedirect('/');
+      }
     }
   },[])
  
   
- 
 
-  
   
 // abc = this.state.isSignup
   const formchanger = () =>{
@@ -91,6 +93,7 @@ const [formvalid, setformvalid] = useState(false)
    }
   }
 
+  
   
 
   const forminputhandler = (event, inputidentifier) => {
@@ -132,7 +135,6 @@ setformvalid(formValid)
     // });
   };
 
- console.log(formvalid)
     
 
   const submithandler = (e) => {
@@ -295,7 +297,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onAuth: (email, password, isSignup,name) =>
       dispatch(authAction.onAuthfetch(email, password, isSignup,name)),
-    PathRedirect : () => dispatch(authAction.onAuthPathRedirect('/'))
+    PathRedirect : (path) => dispatch(authAction.onAuthPathRedirect(path))
   };
 };
 

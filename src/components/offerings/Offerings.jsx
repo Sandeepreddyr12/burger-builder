@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState} from "react";
 import classes from "./offerings.module.css";
 import OfferingsCard from "./offeringsCard/OfferingsCard";
 
 const Offerings = () => {
+
+  const [input, setinput] = useState('');
 
   const produts = (title) => {
 
@@ -23,7 +25,7 @@ const Offerings = () => {
       let prodinfo = [
         dataduplicator(1,'VEG WHOPPER', burgerImgSrc+"/img3.png", 115 ,'Our Signature veg patty Whopper.'),
         dataduplicator(2,'CHICKEN WHOPPER', burgerImgSrc+"/img2.png",145,'World famous flame grilled chicken whopper.'),
-        dataduplicator(3,'CRISPY VEG BURGER', burgerImgSrc+"/img3.png",60,'Our best seller.'),
+        dataduplicator(3,'CRISPY CHICKEN BURGER', burgerImgSrc+"/img3.png",60,'Our best seller.'),
         dataduplicator(4,'CRISPY VEG BURGER', burgerImgSrc+"/img4.png",85,'Our best seller.'),
         dataduplicator(5,'FIERY CHICKEN BURGER', burgerImgSrc+"/img2.png",170,'To hot to handle.'),
       ];
@@ -34,7 +36,7 @@ const Offerings = () => {
             dataduplicator(1,'VEG WHOPPER', burgerImgSrc+"/img3.png", 115 ,'Our Signature veg patty Whopper.'),
             dataduplicator(2,'CHICKEN WHOPPER', burgerImgSrc+"/img2.png",145,'World famous flame grilled chicken whopper.'),
             dataduplicator(3,'CRISPY VEG BURGER', burgerImgSrc+"/img3.png",60,'Our best seller.'),
-            dataduplicator(4,'CRISPY VEG BURGER', burgerImgSrc+"/img4.png",85,'Our best seller.'),
+            dataduplicator(4,'CRISPY CHICKEN BURGER', burgerImgSrc+"/img4.png",85,'Our best seller.'),
             dataduplicator(5,'FIERY CHICKEN BURGER', burgerImgSrc+"/img2.png",170,'To hot to handle.'),
                   ]
           break;
@@ -55,20 +57,38 @@ const Offerings = () => {
               dataduplicator(3,'India Spice Majesty Blend',coffeImgSrc+"/img3.png",90,'Our best seller in the category.'),
             ] 
             break;  
+            
       }
 
 
-    const cards = ( <div>
+    const cards = ( <div style = {{marginTop :'7rem'}}>
         <div className={classes.title}>{title}</div>
         <div className={classes.container}>
-        {prodinfo.map((a) => (<OfferingsCard details = {a}/>))}
+        {prodinfo.map((a) => {
+          if(input === ''){
+            return (<OfferingsCard details = {a}/>)
+          }else{
+           return(a.name.toLowerCase().includes(input.toLowerCase()) ? <OfferingsCard details = {a}/> : null);
+          }
+          })}
         </div>
-      </div>)
-    ;
+      </div>);
+    
     return cards ;
   };
 
+
   return (<div className = {classes.page}> 
+ {/* <div style = {{margin : '5rem'}}> <input type="text"  placeholder = 'search anything...'  /> </div> */}
+ <div className={classes.wrap}>
+   <div className={classes.search}>
+      <input type="text" className={classes.searchTerm} placeholder="What are you looking for?" 
+      onChange = {event => {setinput((event.target.value).trim())}}/>
+      <button type="submit" className={classes.searchButton}>
+        🔍
+     </button>
+   </div>
+</div>
   <div> {produts('burgers')} </div>
   <div> {produts('sandwich')} </div>
   <div> {produts('drinks')} </div>

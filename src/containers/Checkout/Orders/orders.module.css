@@ -1,17 +1,19 @@
 .container{
     background-color: bisque;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     padding-bottom: 15vh;
+    overflow-x: hidden;
 }
 
 .title{
     width: 100%;
-    font-size: 2rem;
+    font-size: clamp(1.5rem,6vw,2.5rem);
     font-weight: bold;
     color: palevioletred;
     font-family: 'Lobster', cursive;
-    margin: 5rem auto 2rem 5rem;
+    text-align: center;
+    margin: 4rem auto 1.5rem auto;
     display: inline-block;
     letter-spacing: 1px;
 }
@@ -25,7 +27,7 @@
 
  .norders{
     position: relative;
-    top: 10rem;
+    top: 6rem;
     
     width: 650px;
     max-width: 80%;
@@ -36,13 +38,15 @@
      margin: auto;
      background: rgb(238, 232, 232);
 
-     font-size: medium;
+     font-size: clamp(.4rem, 1.2rem, 2rem);
      font-weight: 700;
 
      display: flex;
      justify-content: space-between;
         flex-wrap: wrap;
+
     }
+
 
 .norders button{
     background-color: hsl(6, 93%, 71%);
@@ -55,6 +59,17 @@
 @media (max-width : 820px) {
     .title{
         text-align: center;
-        margin: 3rem auto;
+        margin: 5rem auto 2rem auto;
+    }
+}
+
+@media (max-width : 450px){
+    .norders{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .norders button{
+        margin-top: 1.5rem;
     }
 }

@@ -114,7 +114,7 @@ class Address extends Component {
           Items : item,
           quant : item.quantity
         }
-        this.props.orderinitiater(cartorder);
+      this.props.orderinitiater(cartorder);
       })
 
       // order = {

@@ -1,6 +1,6 @@
 .nbar{
     width: 100%;
-    height: 2.5rem;
+    height: 4.2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,14 +14,16 @@
 }
 
 .logo{
-    width: 100%;
-    margin-left: 10%;
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    line-height: 3px;
-    color: rgb(224, 46, 30);
+    width: 10rem;
+    margin-left: 8%;
     cursor: pointer;
+    margin-top: 4rem;
+    user-select: none;
+    
+}
+
+.logo img{
+    width: 100%;
 }
 
 .hamburger{
@@ -31,15 +33,22 @@ display: none;
 /* .desktop_mode{
 } */
 
-@media (max-width : 605px){
+@media (max-width : 700px){
     .desktop_mode{
         display: none;
     }
+
+    .nbar{
+        height: 2.8rem;
+    }
     .hamburger{
         display: block;
-        font-size: 40px;
+        font-size: 2rem;
         margin-right: 1em;
         font-weight: 900;
+    }
+    .logo{
+        width: 130px;
     }
 }
 

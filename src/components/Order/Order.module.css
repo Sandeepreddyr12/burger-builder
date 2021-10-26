@@ -1,7 +1,7 @@
 .singleorder{
-    width: 650px;
+    width: 850px;
     max-width: 80%;
-    /* height: 75px; */
+    min-height: 12rem;
     border: 2px solid lightgray;
     box-shadow: 0px 1px 5px gray;
     padding: 10px 20px;

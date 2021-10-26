@@ -108,7 +108,7 @@ class Burgerbuilder extends Component {
   // }
 
   render() {
-    console.log(this.props.product);
+
     const less_disabler = { ...this.props.ings };
 
     for (let key in less_disabler) {
@@ -154,8 +154,8 @@ class Burgerbuilder extends Component {
 
     return (
       <div className={classes.bbcontainer}>
-        <div className = {cssclass.title} >Burger-builder</div>
-        <Modal show={this.state.modal_order} modalexit={this.modalremover}>
+        <div style = {{textAlign: 'center'}}  className = {cssclass.title} >Burger-builder</div>
+        <Modal show={this.state.modal_order} modalexit={this.modalremover} positionHandler = {'22%'}>
           {ordersummary}
         </Modal>
 

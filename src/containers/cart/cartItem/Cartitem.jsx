@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
 
+import {RiDeleteBin6Line} from "react-icons/ri";
+
 import classes from './cartitem.module.css';
 import * as actions from '../../../redux/actions/index';
 import Buldcontrol from '../../../components/buildcontrols/buildcontrol/BuildControl';
@@ -8,7 +10,7 @@ import Burger from '../../../components/burger/Burger';
 
 const Cartitem = (props) => { 
 
-
+console.log(props,'🙋🏻‍♂️🙋🏻‍♂️💕🙋🏻‍♂️')
     const ingredients = [];
 
     if(props.info.items){
@@ -29,7 +31,7 @@ const Cartitem = (props) => {
     return (
         <div className = {classes.item}>
             <div className = {classes.product}>
- {props.info.img ? <img src={props.info.img} alt={props.info.productname} /> : <Burger itemslist = {props.info.items}/>}           
+ {props.info.img ? <img src={props.info.img} alt={props.info.productname} /> : <div style = {{marginTop : '2rem'}}><Burger itemslist = {props.info.items}/></div> }           
            </div>
             <div className = {classes.description}>
                 <div className = {classes.title}>{props.info.productname}</div>
@@ -46,7 +48,7 @@ const Cartitem = (props) => {
                 /> </div>
                 </div>
                 <div className = {classes.buttons}>
-                    <span onClick = {() => props.itemRemover(props.info.id)}> remove</span>
+                    <span onClick = {() => props.itemRemover(props.info.id)} style = {{fontSize : '1.5rem'}}><RiDeleteBin6Line/></span>
                     <span>Checkout</span>
                 </div>
             </div>

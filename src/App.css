@@ -1,8 +1,8 @@
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 8px;
 }
 
-body.thin::-webkit-scrollbar {
+.thin::-webkit-scrollbar {
     width: 2px;
 }
 
@@ -18,3 +18,10 @@ body.thin::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(100,100,100,0.4); 
 }
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(82, 76, 76, 0.4) #eee;
+}
+
+

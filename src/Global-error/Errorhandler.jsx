@@ -35,9 +35,10 @@ const responseinterceptor =  axiosinstance.interceptors.response.use(
     return (
        <React.Fragment>
         <Modal
+        positionHandler = {'40%'}
         show = {errorhand}
         modalexit = {errorremover_modal}>
-            {errorhand ? errorhand.message : null}
+           <div style = {{fontWeight : 'bold', color : 'red'}}> {errorhand ? errorhand.message : null} </div>
         </Modal>
         <Wrappedcomponent {...props}/>
        </React.Fragment>
