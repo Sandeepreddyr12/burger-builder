@@ -5,7 +5,7 @@ import {GiCampfire} from "react-icons/gi";
 import { FaHamburger } from "react-icons/fa";
 import { GiSandwich,GiCoffeeMug } from "react-icons/gi";
 
-import Slider from "./Slider/Slider";
+// import Slider from "./Slider/Slider";
 import Buttons from "../buttons/Buttons";
 import Colorpicker from "../../colorpicker/Colorpicker";
 
@@ -78,11 +78,11 @@ const Landingpage = () => {
 
   let itemIcon = <span>Burger  <FaHamburger color = "green"/></span>;
 
-  if(itemName == "Burger"){
+  if(itemName === "Burger"){
     itemIcon = <span>Burger  <FaHamburger color = "green"/></span>
-  }else if(itemName == "Sandwich"){
+  }else if(itemName === "Sandwich"){
     itemIcon =  <span>Sandwich  <GiSandwich color = "maroon"/></span>
-  }else if(itemName == "Coffe"){
+  }else if(itemName === "Coffe"){
     itemIcon = <span>Coffe  <GiCoffeeMug color = "#d62569"/></span>
   }
 

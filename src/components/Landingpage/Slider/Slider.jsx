@@ -1,8 +1,6 @@
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/effect-cube/effect-cube.min.css";
 import "swiper/components/pagination/pagination.min.css";
@@ -10,10 +8,8 @@ import "swiper/components/navigation/navigation.min.css"
 
 import classes from "./Slider.module.css";
 
-// import Swiper core and required modules
 import SwiperCore, { EffectCube, Pagination, Mousewheel } from "swiper/core";
 
-// install Swiper modules
 SwiperCore.use([EffectCube, Pagination, Mousewheel]);
 
 const Slider = (props) => {
@@ -36,6 +32,7 @@ switch(props.slider){
 }
 
 
+
   return (
     <>
       <Swiper
@@ -51,9 +48,7 @@ switch(props.slider){
           }}
           // navigation = {true}
           mousewheel={true}
-          onInit = {() =>{console.log('swiper init')
-            props.indexhandler(0)
-        }}
+          onInit = {() =>{props.indexhandler(0)}}
           onSlideChange={(swiper)=> {console.log('onslide change')
           props.indexhandler(swiper.activeIndex)        
         }}

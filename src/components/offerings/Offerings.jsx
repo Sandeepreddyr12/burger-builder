@@ -3,6 +3,9 @@ import classes from "./offerings.module.css";
 import OfferingsCard from "./offeringsCard/OfferingsCard";
 
 const Offerings = () => {
+  console.log("🔻❤🔻💕🙋🏻‍♂️");
+
+
 
   const [input, setinput] = useState('');
 
@@ -85,7 +88,7 @@ const Offerings = () => {
       <input type="text" className={classes.searchTerm} placeholder="What are you looking for?" 
       onChange = {event => {setinput((event.target.value).trim())}}/>
       <button type="submit" className={classes.searchButton}>
-        🔍
+      <span role = "img" aria-label="Search"> 🔍</span> 
      </button>
    </div>
 </div>

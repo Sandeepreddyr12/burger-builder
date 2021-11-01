@@ -18,7 +18,7 @@ const Myprofile = (props) => {
              <img src="/images/profileimg.png" alt="profile" />
            </div>
             <div className = {classes.details}> 
-              <span>hello <span>🙏🏻</span></span>
+              <span>hello <span role = "img" aria-label="Hello">🙏🏻</span></span>
               <div style = {{textTransform : "capitalize"}}><strong><HiUser/>  {props.users.name ? props.users.name :'hello user'}</strong></div>
             <div><strong><HiOutlineMail/>  {props.users.email}</strong></div>
             </div>

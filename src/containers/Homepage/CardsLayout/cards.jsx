@@ -3,7 +3,7 @@ import classes from "./cards.module.css";
 import Card from "./card/card";
 
 const Cards = () => {
-  
+
 
   return (
     <div className={classes.container}>

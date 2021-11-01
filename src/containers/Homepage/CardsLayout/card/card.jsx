@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./card.module.css";
 import Button from "../../../../components/buttons/Buttons";
 
-const card = (props) => {
+const Card = (props) => {
 
   const style = {backgroundImage: `url(${props.bgimage})`}
  
@@ -21,4 +21,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;

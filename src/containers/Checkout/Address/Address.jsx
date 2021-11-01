@@ -114,7 +114,7 @@ class Address extends Component {
           Items : item,
           quant : item.quantity
         }
-      this.props.orderinitiater(cartorder);
+     return this.props.orderinitiater(cartorder);
       })
 
       // order = {
@@ -132,7 +132,7 @@ class Address extends Component {
         userId : this.props.UID,
         quant : 1
       };
-      this.props.orderinitiater(order);
+     return this.props.orderinitiater(order);
     }
 
     

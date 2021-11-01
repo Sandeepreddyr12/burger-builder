@@ -24,7 +24,7 @@ const [showPicker, setshowPicker] = useState(false);
             props.colorpickHandler(updatedcolor.hex)
             }}
             />
-            <button onClick = {() => setshowPicker(showPicker => !showPicker)}>&#10060;</button>
+            <button onClick = {() => setshowPicker(showPicker => !showPicker)}><span role = "img" aria-label="Exit button">&#10060;</span></button>
             </div>}
            </div>
         </div>

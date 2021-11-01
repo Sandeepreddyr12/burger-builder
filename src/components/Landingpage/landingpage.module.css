@@ -2,9 +2,7 @@
     position: relative;
     height: 40rem;
     width: 100%;
-    /* background-image: url('/images/background.jpg'); */
     background-size: cover;
-    /* background-color: #ad5a5a; */
     transition: all .5s;
     margin-top: 4.2rem;
 }
@@ -130,18 +128,6 @@
         transform: translateY(-15px);
     }
 
-
-    /* .colorpickers{
-        display: flex;
-        flex-direction: column;
-    } */
-
-    /* .svg{
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        bottom: 0;
-    } */
 
 
     @media(max-width : 710px){

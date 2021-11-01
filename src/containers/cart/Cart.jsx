@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { Route, Redirect } from "react-router-dom";
+import { Route} from "react-router-dom";
 
 import classes from "./cart.module.css";
 import Cartitem from "./cartItem/Cartitem";
@@ -21,6 +21,7 @@ const Cart = (props) => {
 
     return total;
   };
+
 
   useEffect(() => {
     settotalprice(getTotalPrice(props.products));
@@ -80,7 +81,7 @@ const Cart = (props) => {
                   <span>HAVE A PROMO CODE?</span>
                 </div>
                 <div className={classes.columns}>
-                  <span>Merchandise</span>
+                  <span>Total Price</span>
                   <span>₹ {totalprice}/-</span>
                 </div>
 
