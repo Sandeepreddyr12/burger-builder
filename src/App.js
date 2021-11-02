@@ -7,14 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 import './App.css';
 import Layout from './components/layout/Layout';
-import Checkout from './containers/Checkout/Checkout';
 import Auth from './containers/Auth/auth';
 import Myprofile from './containers/Auth/Profilecomp/myprofile';
 import Privateroute from './components/Privateroute/Privateroute';
 import * as actions from './redux/actions/index';
-
 import Homepage from './containers/Homepage/Homepage';
-import Cart from './containers/cart/Cart';
+import Spinner from './components/spinners/Spinners';
+// import Cart from './containers/cart/Cart';
+// import Checkout from './containers/Checkout/Checkout';
 // import Orders from './containers/Checkout/Orders/Orders';
 // import Builder from './containers/builderss/Builders';
 // import Offerings from './components/offerings/Offerings';
@@ -25,6 +25,8 @@ import Cart from './containers/cart/Cart';
 const LazyBuilder = React.lazy(() => import('./containers/builderss/Builders'))
 const LazyOrders = React.lazy(() => import('./containers/Checkout/Orders/Orders'))
 const LazyOfferings = React.lazy(() => import('./components/offerings/Offerings'))
+const LazyCheckout = React.lazy(() => import('./containers/Checkout/Checkout'))
+const LazyCart = React.lazy(() => import('./containers/cart/Cart'))
 const LazyFooter = React.lazy(() => import('./containers/Homepage/footer/footer'))
 
 
@@ -46,12 +48,12 @@ function App() {
     <div className="App">
       <ToastContainer autoClose={2000} />
       <Layout>
-        <React.Suspense fallback = 'loading....'>
+        <React.Suspense fallback = {<Spinner/>}>
         <Switch>
            <Route path = '/builder' component = {LazyBuilder} />
-           <Route path = '/checkout' component = {Checkout} />
+           <Route path = '/checkout' component = {LazyCheckout} />
            <Route path = '/offerings' component = {LazyOfferings} />
-           <Route path = '/cart' component = {Cart} />
+           <Route path = '/cart' component = {LazyCart} />
             <Privateroute path = "/Myprofile" component = {Myprofile}/>
             
            <Privateroute path = '/orders' component = {LazyOrders} />

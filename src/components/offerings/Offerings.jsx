@@ -3,7 +3,6 @@ import classes from "./offerings.module.css";
 import OfferingsCard from "./offeringsCard/OfferingsCard";
 
 const Offerings = () => {
-  console.log("🔻❤🔻💕🙋🏻‍♂️");
 
 
 
