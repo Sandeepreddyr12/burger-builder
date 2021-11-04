@@ -35,9 +35,41 @@
     max-width: 100%;
 }
 
+.exitbtn{
+    display: none;
+}
+
+.exitbtn button{
+    position: absolute;
+    left: 2rem;
+    height: 3rem;
+    top: .6rem;
+    outline: none;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 2.5rem;
+    cursor: pointer;
+    text-align: center;
+    color: red;
+ }
+
+ .exitbtn button:hover{
+     
+    transform: rotate(90deg) scale(1.1);
+  color: hsl(0, 100%, 80%);
+  transition: transform .5s ease;
+}
+
 
 @media (min-width : 700px){
     .sidebar{
         display: none;
+    }
+}
+
+@media (max-width : 380px){
+    .exitbtn{
+        display: block;
     }
 }

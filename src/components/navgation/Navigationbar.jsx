@@ -30,7 +30,7 @@ function Navigationbar(props) {
              <Navpages/>
              </nav>
              <ExitContext.Provider value = {modalexit}>
-             <Sidebar show = {Menu}/>
+             <Sidebar show = {Menu} modalexit = {modalexit}/>
              </ExitContext.Provider>
              <Overlay show_overlay = {showOverlay} modalexit = {modalexit}></Overlay>
              
