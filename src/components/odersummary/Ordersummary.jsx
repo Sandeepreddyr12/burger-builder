@@ -11,7 +11,6 @@ const Ordersummary = (props) => {
         return <li key = {a}> {a} : {props.ingredients[a]}</li>
     })
 
-    console.log(props)
 
     return(
     

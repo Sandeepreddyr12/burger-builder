@@ -69,8 +69,8 @@ const Cart = (props) => {
               </h3>
 
               {props.products.map((product) => (
-                <div className={classes.cartitem}>
-                  <Cartitem info={product} count={product.quantity} />
+                <div className={classes.cartitem} key = {product.id}>
+                  <Cartitem info={product} count={product.quantity}  />
                 </div>
               ))}
             </div>

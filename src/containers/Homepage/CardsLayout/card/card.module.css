@@ -1,77 +1,72 @@
+.card {
+  width: 16rem;
+  max-width: 80%;
+  height: 22rem;
+  margin: 2rem;
+  background-color: rgb(238, 182, 182);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.8);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 8.5rem 0 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  transition-delay: 0.3s;
+}
 
-.card{
-    width : 16rem;
+.card .cardcontent {
+  color: white;
+  padding: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 5%, 0) 0%,
+    hsla(0, 0%, 5%, 0.25) 18%,
+    hsla(0, 0%, 6%, 0.5) 46%,
+    hsla(0, 0%, 7%, 0.8) 75%,
+    hsla(0, 0%, 8%, 0.9) 100%
+  );
+}
+.cardcontent .title {
+  position: relative;
+  width: max-content;
+  color: salmon;
+}
+
+.title::after {
+  content: "";
+  width: calc(100% + 1.5rem);
+  height: 4px;
+  background-color: green;
+  position: absolute;
+  left: calc(1.5rem * -1);
+  bottom: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.card:hover .title::after {
+  transform: scale(1);
+}
+
+@media (hover) {
+  .card {
+    padding: 16rem 0 0;
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    padding: 8.5rem 0 0;
+  }
+  .card:hover .title::after {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 625px) {
+  .card {
     max-width: 80%;
-    height : 22rem;
-    margin: 2rem;
-    background-color: rgb(238, 182, 182);
-    border-radius: .5rem;
-    /* box-shadow: 0 20px 50px rgba(240, 46, 170, 0.7); */
-    /* box-shadow: 14px 7px 11px 0px rgb(0 0 0 / 50%); */
-    box-shadow: 0px 0px 4px 4px rgba(128,128,128,0.8);
--webkit-box-shadow: 0px 0px 4px 4px rgba(128,128,128,0.8);
--moz-box-shadow: 0px 0px 4px 4px rgba(128,128,128,0.8);
-    /* background-image: url("/images/burgers/img2.png"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center bottom;
-    padding: 8.5rem 0 0 ;
-    overflow: hidden;
-    transition: all .5s;
-    transition-delay: .3s;
-}
-
-
-
-
-.cardcontent{
---padding: 1.5rem;
-/* color: rgb(10, 2, 2); */
-color: white;
-padding: var(--padding);
-/* background: linear-gradient(to bottom, rgba(235,233,249,0) 34%,rgba(235,233,249,0.03) 36%,rgba(216,208,239,0.25) 50%,rgba(206,199,236,0.71) 80%,rgba(194,191,234,1) 99%,rgba(193,191,234,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-background: linear-gradient(180deg, hsla(0, 0%, 5%, 0) 0%, hsla(0, 0%, 5%, 0.25) 18%, hsla(0, 0%, 6%, 0.5) 46%, hsla(0, 0%, 7%, 0.8) 75%, hsla(0, 0%, 8%, 0.9) 100%);
-}
-.cardcontent .title{
-    position: relative;
-    width: max-content;
-    color: salmon;
-}
-.title::after{
-    content: '';
-    width: calc(100% + var(--padding));
-    height: 4px;
-    background-color: green;
-    position: absolute;
-    left: calc(var(--padding)*-1);
-    bottom: 0;
-    transform: scale(0);
-    transform-origin: left;
-    transition: transform .5s;
-}
-
-.card:hover .title::after{
-    transform: scale(1);
-}
-
-@media(hover){
-    .card{
-        padding: 16rem 0 0 ;
-    }
-    .card:hover,
-    .card:focus-within
-    {
-        transform: scale(1.05);
-        padding: 8.5rem 0 0 ;
-    }
-    .card:hover .title::after{
-    transform: scale(1);
-}
-}
-
-@media (max-width : 625px) {
-    .card{
-        max-width: 80%;
-        height: auto;
-    }
+    height: auto;
+  }
 }

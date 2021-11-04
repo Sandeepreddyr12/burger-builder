@@ -5,9 +5,7 @@ import CartButton from '../../../containers/cart/cartItem/cartbutton/CartButton'
 const  OfferingsCard = (props) => {
 
 const [formSelect, setformSelect] = useState('Medium');
-console.log(formSelect)
 
-console.log(props.details)
 
 let prices;
 

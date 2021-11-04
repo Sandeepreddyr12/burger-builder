@@ -52,7 +52,6 @@ class Orders extends Component {
 
     render() {
 
-        console.log("🔻❤🔻💕🙋🏻‍♂️");
 
        let orderpage  =  <Spinner/> 
 

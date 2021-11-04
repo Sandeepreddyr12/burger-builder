@@ -8,7 +8,6 @@ import * as authAction from "../../../../redux/actions/index";
 
  const LogoutBtn = (props) => {
 
-    console.log(props.history)
     const historyRepalceHandler = (link) => {
       props.history.replace(link);
         }

@@ -10,7 +10,6 @@ import Burger from '../../../components/burger/Burger';
 
 const Cartitem = (props) => { 
 
-console.log(props,'🙋🏻‍♂️🙋🏻‍♂️💕🙋🏻‍♂️')
     const ingredients = [];
 
     if(props.info.items){

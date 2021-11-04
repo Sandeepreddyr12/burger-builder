@@ -109,7 +109,6 @@ class Burgerbuilder extends Component {
 
   render() {
 
-    console.log("🔻❤🔻💕🙋🏻‍♂️");
 
 
     const less_disabler = { ...this.props.ings };

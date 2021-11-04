@@ -49,10 +49,9 @@ switch(props.slider){
           // navigation = {true}
           mousewheel={true}
           onInit = {() =>{props.indexhandler(0)}}
-          onSlideChange={(swiper)=> {console.log('onslide change')
+          onSlideChange={(swiper)=> {
           props.indexhandler(swiper.activeIndex)        
         }}
-          onReachEnd = {(swiper) => console.log('reach end',swiper)}
   
         className={classes.swiperSlide}>
         <SwiperSlide>

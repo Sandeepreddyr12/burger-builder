@@ -68,9 +68,9 @@ const Offerings = () => {
         <div className={classes.container}>
         {prodinfo.map((a) => {
           if(input === ''){
-            return (<OfferingsCard details = {a}/>)
+            return (<OfferingsCard details = {a} key = {a.name}/>)
           }else{
-           return(a.name.toLowerCase().includes(input.toLowerCase()) ? <OfferingsCard details = {a}/> : null);
+           return(a.name.toLowerCase().includes(input.toLowerCase()) ? <OfferingsCard details = {a} key = {a.name}/> : null );
           }
           })}
         </div>

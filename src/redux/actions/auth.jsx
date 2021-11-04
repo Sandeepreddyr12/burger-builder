@@ -194,7 +194,6 @@ export const onAuthfetch = (email, password, isSignup,name, historyReplaceHandle
       auth
       .onAuthStateChanged(userAuth => {
         if(userAuth) {
-          console.log(userAuth)
           const data = {
             email  : userAuth.email,
             uid : userAuth.uid,

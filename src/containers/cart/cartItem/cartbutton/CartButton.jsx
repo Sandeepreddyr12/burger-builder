@@ -28,9 +28,6 @@ const CartButton = (props) => {
      }
     }, [onclick])
 
-    // console.log(props.quant, 'mmmmqqqqq')
-
-    // console.log(props.disabler, 'mmmmqqqqq')
 
     
     return (
