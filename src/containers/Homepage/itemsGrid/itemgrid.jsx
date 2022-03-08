@@ -1,8 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import classes from "./itemgrid.module.css";
 import Button from "../../../components/buttons/Buttons";
 
 const Itemgrid = () => {
+
+  let history = useHistory();
 
   return (
     <div className={classes.container}>
@@ -19,7 +23,7 @@ const Itemgrid = () => {
             dolorem perferendis asperiores laborum recusandae! Itaque nisi
             quam tempora!
             </p>
-            <Button btntype="success">buy now</Button>
+            <Button btntype="success" clicked = {() =>history.push('./offerings')}>buy now</Button>
         </div>
         <div className={classes.cimg1}></div>
         <div className={classes.cimg2}></div>
@@ -34,7 +38,7 @@ const Itemgrid = () => {
             dolorem perferendis asperiores laborum recusandae! Itaque nisi
             quam tempora!
             </p>
-            <Button btntype="success">buy now</Button>
+            <Button btntype="success" clicked = {() =>history.push('./offerings')}>buy now</Button>
         </div>
         <div className={classes.fimg1}><div>
           <span>On cultivating a strong culture!</span>

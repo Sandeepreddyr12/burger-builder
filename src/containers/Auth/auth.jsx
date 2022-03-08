@@ -114,7 +114,6 @@ const [formvalid, setformvalid] = useState(false)
 
     updatedinputs.valid = inputValid
     
-    console.log(upadatedSigninForm)
 
     let formValid = true;
     for(let input in upadatedSigninForm) {

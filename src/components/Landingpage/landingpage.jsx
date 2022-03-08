@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./landingpage.module.css";
 
 import {GiCampfire} from "react-icons/gi";
@@ -20,7 +21,7 @@ const Landingpage = () => {
   const [btncolor, setbtncolor] = useState("#008F61");
 
 
-
+  let history = useHistory();
 
   const itemChanger = (_, itemname) => {
     // setItem(imagesrc)
@@ -108,7 +109,7 @@ const Landingpage = () => {
             <span>
             <Buttons
             style = {{backgroundColor : `${btncolor}`}}
-            >order now</Buttons>
+            clicked = {() =>history.push('./builder')}>order now</Buttons>
             </span>
           </div>
         </div>
