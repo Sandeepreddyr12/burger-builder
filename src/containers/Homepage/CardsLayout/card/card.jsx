@@ -18,7 +18,7 @@ const Card = (props) => {
       <p className = {classes.description}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos
       </p>
-      <Button clicked = {props.address} clicked = {() =>history.push(props.cardname.includes("Coffe") ?"/offerings" : "/builder")} btntype="success">{props.cardname.includes("Coffe") ?" Order-Now" : "Build-now"}</Button>
+      <Button clicked = {() =>history.push(props.cardname.includes("Coffe") ?"/offerings" : "/builder")} btntype="success">{props.cardname.includes("Coffe") ?" Order-Now" : "Build-now"}</Button>
       </div>
     </div>
   );
