@@ -1,3 +1,27 @@
+
+
+Burgerbuilder/ Burger shop.
+
+deployed link : [grilled souls](https://react-myburger-3e53f.web.app/)
+
+
+Technologies used/Standouts
+
+6-page layout with Private Routes
+• Redux, Routing & vanilla CSS.
+• Firebase Authentication & Data-Base.
+• React JS (35% Class Comp & 65% Hooks).
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
